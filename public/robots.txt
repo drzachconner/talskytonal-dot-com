@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /thanks
+
+Sitemap: https://cultivatewellnesschiro.com/sitemap.xml
+Host: https://cultivatewellnesschiro.com

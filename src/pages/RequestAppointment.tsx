@@ -1,0 +1,132 @@
+import { useSeo } from '../hooks/useSeo';
+import { SITE } from '../data/site';
+import { useEffect } from 'react';
+import { breadcrumbJsonLd } from '../lib/breadcrumbs';
+import { Calendar, Clock, Phone } from 'lucide-react';
+
+export default function RequestAppointment() {
+  useSeo({
+    title: 'Request an Appointment',
+    description: 'Schedule your chiropractic appointment online or call us today.',
+    canonical: '/request-an-appointment',
+  });
+
+  useEffect(() => {
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.text = JSON.stringify(breadcrumbJsonLd([
+      { name: 'Home', url: `https://${SITE.domain}/` },
+      { name: 'Request Appointment', url: `https://${SITE.domain}/request-an-appointment` },
+    ]));
+    document.head.appendChild(script);
+
+    return () => {
+      document.head.removeChild(script);
+    };
+  }, []);
+
+  return (
+    <>
+      <section className="py-16 bg-gradient-to-br from-emerald-50 to-teal-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center mb-6">
+            Request an Appointment
+          </h1>
+          <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto">
+            Schedule your visit online or give us a call. We look forward to seeing you!
+          </p>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-xl text-center">
+              <div className="bg-emerald-700 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Calendar size={32} className="text-white" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Book Online</h2>
+              <p className="text-gray-700 mb-6">
+                View available appointments and schedule instantly through our online booking system.
+              </p>
+              <a
+                href={SITE.janeUrlWithUtm}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-emerald-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-emerald-800 transition"
+              >
+                Book Now
+              </a>
+            </div>
+
+            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-xl text-center">
+              <div className="bg-emerald-700 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
+                <Phone size={32} className="text-white" />
+              </div>
+              <h2 className="text-2xl font-bold text-gray-900 mb-4">Call Us</h2>
+              <p className="text-gray-700 mb-6">
+                Speak with our friendly staff to schedule your appointment or ask any questions.
+              </p>
+              <a
+                href={`tel:${SITE.phone.replace(/[^+\d]/g, '')}`}
+                className="inline-block bg-emerald-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-emerald-800 transition"
+              >
+                {SITE.phone}
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Office Hours</h2>
+            <div className="bg-white p-8 rounded-xl shadow-sm">
+              <div className="flex items-start gap-4 mb-6">
+                <Clock size={24} className="text-emerald-700 flex-shrink-0 mt-1" />
+                <div className="space-y-2">
+                  {SITE.hours.map((hour) => (
+                    <p key={hour} className="text-gray-700 text-lg">
+                      {hour}
+                    </p>
+                  ))}
+                </div>
+              </div>
+              <div className="pt-6 border-t border-gray-200">
+                <p className="text-gray-600">
+                  Same-day appointments often available. Emergency care accommodated whenever
+                  possible.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="py-16 bg-white">
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
+            What to Expect at Your Appointment
+          </h2>
+          <div className="space-y-6">
+            <div className="bg-gray-50 p-6 rounded-xl">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">New Patients</h3>
+              <p className="text-gray-700">
+                Your first visit includes a comprehensive consultation, examination, and if
+                appropriate, your first adjustment. Plan for 45-60 minutes.
+              </p>
+            </div>
+            <div className="bg-gray-50 p-6 rounded-xl">
+              <h3 className="text-lg font-bold text-gray-900 mb-2">Returning Patients</h3>
+              <p className="text-gray-700">
+                Follow-up visits are typically 15-30 minutes and focus on your continued progress
+                and adjustments as needed.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
+  );
+}
