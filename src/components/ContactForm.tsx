@@ -61,7 +61,7 @@ export default function ContactForm() {
           maxLength={120}
           required
           autoComplete="name"
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
         />
       </div>
 
@@ -78,7 +78,7 @@ export default function ContactForm() {
           autoComplete="email"
           inputMode="email"
           aria-describedby="email-help"
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
         />
         <p id="email-help" className="text-xs text-gray-500 mt-1">
           We'll only use this to contact you about your inquiry.
@@ -96,7 +96,7 @@ export default function ContactForm() {
           placeholder="555-123-4567"
           autoComplete="tel"
           inputMode="tel"
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
         />
       </div>
 
@@ -112,7 +112,7 @@ export default function ContactForm() {
           minLength={10}
           maxLength={2000}
           rows={5}
-          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent"
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
         ></textarea>
       </div>
 
@@ -121,7 +121,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={loading}
-        className="w-full px-4 py-3 bg-emerald-700 text-white font-semibold rounded-lg hover:bg-emerald-800 disabled:opacity-50 disabled:cursor-not-allowed transition"
+        className="w-full px-4 py-3 bg-primary-dark text-white font-semibold rounded-lg hover:bg-primary-accent disabled:opacity-50 disabled:cursor-not-allowed transition"
       >
         {loading ? 'Sending...' : 'Send Message'}
       </button>
@@ -131,7 +131,7 @@ export default function ContactForm() {
         medical concerns, please call{' '}
         <a
           href={`tel:${SITE.phone.replace(/[^+\d]/g, '')}`}
-          className="underline hover:text-emerald-700"
+          className="underline hover:text-primary-dark"
         >
           {SITE.phone}
         </a>{' '}

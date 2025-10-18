@@ -56,7 +56,7 @@ export default function NewPatientCenter() {
 
   return (
     <>
-      <section className="py-16 bg-gradient-to-br from-emerald-50 to-teal-50">
+      <section className="py-16 bg-gradient-to-br from-primary-light/10 to-primary-light/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center mb-6">
             New Patient Center
@@ -79,7 +79,7 @@ export default function NewPatientCenter() {
                 <div className="flex gap-4 mb-4">
                   <div className="flex-shrink-0">
                     <div className="bg-emerald-100 w-12 h-12 rounded-lg flex items-center justify-center">
-                      <step.icon size={24} className="text-emerald-700" />
+                      <step.icon size={24} className="text-primary-dark" />
                     </div>
                   </div>
                   <div>
@@ -90,14 +90,14 @@ export default function NewPatientCenter() {
                         href={step.link}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-block text-emerald-700 font-medium hover:text-emerald-800"
+                        className="inline-block text-primary-dark font-medium hover:text-primary-accent"
                       >
                         {step.linkText} →
                       </a>
                     ) : step.link ? (
                       <Link
                         to={step.link}
-                        className="inline-block text-emerald-700 font-medium hover:text-emerald-800"
+                        className="inline-block text-primary-dark font-medium hover:text-primary-accent"
                       >
                         {step.linkText} →
                       </Link>
@@ -156,17 +156,17 @@ export default function NewPatientCenter() {
         </div>
       </section>
 
-      <section className="py-16 bg-emerald-700">
+      <section className="py-16 bg-primary-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-          <p className="text-lg text-emerald-50 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-primary-light/10 mb-8 max-w-2xl mx-auto">
             Take the first step toward better health. Schedule your appointment today.
           </p>
           <a
             href={SITE.janeUrlWithUtm}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block bg-white text-emerald-700 px-8 py-4 rounded-lg text-lg font-medium hover:bg-emerald-50 transition shadow-lg"
+            className="inline-block bg-white text-primary-dark px-8 py-4 rounded-lg text-lg font-medium hover:bg-primary-light/10 transition shadow-lg"
           >
             Book Your First Visit
           </a>

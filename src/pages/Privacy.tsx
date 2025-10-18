@@ -10,7 +10,7 @@ export default function Privacy() {
 
   return (
     <>
-      <section className="py-16 bg-gradient-to-br from-emerald-50 to-teal-50">
+      <section className="py-16 bg-gradient-to-br from-primary-light/10 to-primary-light/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center mb-6">
             Privacy Policy
@@ -81,10 +81,10 @@ export default function Privacy() {
                 {SITE.address.city}, {SITE.address.region} {SITE.address.postal}
               </p>
               <p className="text-gray-700 mb-2">
-                Phone: <a href={`tel:${SITE.phone.replace(/[^+\d]/g, '')}`} className="text-emerald-700 hover:underline">{SITE.phone}</a>
+                Phone: <a href={`tel:${SITE.phone.replace(/[^+\d]/g, '')}`} className="text-primary-dark hover:underline">{SITE.phone}</a>
               </p>
               <p className="text-gray-700">
-                Email: <a href={`mailto:${SITE.email}`} className="text-emerald-700 hover:underline">{SITE.email}</a>
+                Email: <a href={`mailto:${SITE.email}`} className="text-primary-dark hover:underline">{SITE.email}</a>
               </p>
             </div>
 

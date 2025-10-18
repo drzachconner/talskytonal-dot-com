@@ -28,7 +28,7 @@ export default function Contact() {
 
   return (
     <>
-      <section className="py-16 bg-gradient-to-br from-emerald-50 to-teal-50">
+      <section className="py-16 bg-gradient-to-br from-primary-light/10 to-primary-light/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center mb-6">
             Contact Us
@@ -48,14 +48,14 @@ export default function Contact() {
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <div className="bg-emerald-100 w-12 h-12 rounded-lg flex items-center justify-center">
-                      <Phone size={24} className="text-emerald-700" />
+                      <Phone size={24} className="text-primary-dark" />
                     </div>
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Phone</h3>
                     <a
                       href={`tel:${SITE.phone.replace(/[^+\d]/g, '')}`}
-                      className="text-gray-700 hover:text-emerald-700 transition"
+                      className="text-gray-700 hover:text-primary-dark transition"
                     >
                       {SITE.phone}
                     </a>
@@ -65,14 +65,14 @@ export default function Contact() {
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <div className="bg-emerald-100 w-12 h-12 rounded-lg flex items-center justify-center">
-                      <Mail size={24} className="text-emerald-700" />
+                      <Mail size={24} className="text-primary-dark" />
                     </div>
                   </div>
                   <div>
                     <h3 className="font-bold text-gray-900 mb-1">Email</h3>
                     <a
                       href={`mailto:${SITE.email}`}
-                      className="text-gray-700 hover:text-emerald-700 transition"
+                      className="text-gray-700 hover:text-primary-dark transition"
                     >
                       {SITE.email}
                     </a>
@@ -82,7 +82,7 @@ export default function Contact() {
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <div className="bg-emerald-100 w-12 h-12 rounded-lg flex items-center justify-center">
-                      <MapPin size={24} className="text-emerald-700" />
+                      <MapPin size={24} className="text-primary-dark" />
                     </div>
                   </div>
                   <div>
@@ -97,7 +97,7 @@ export default function Contact() {
                       )}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-emerald-700 hover:text-emerald-800 font-medium inline-block mt-2"
+                      className="text-primary-dark hover:text-primary-accent font-medium inline-block mt-2"
                     >
                       Get Directions →
                     </a>
@@ -107,7 +107,7 @@ export default function Contact() {
                 <div className="flex gap-4">
                   <div className="flex-shrink-0">
                     <div className="bg-emerald-100 w-12 h-12 rounded-lg flex items-center justify-center">
-                      <Clock size={24} className="text-emerald-700" />
+                      <Clock size={24} className="text-primary-dark" />
                     </div>
                   </div>
                   <div>

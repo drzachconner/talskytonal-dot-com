@@ -1,22 +1,22 @@
 export const services = [
   {
     id: 'pediatric',
-    title: 'Pediatric Chiropractic',
-    description: 'Gentle, specialized care for infants and children to support healthy development.',
+    title: 'Pediatric',
+    description: 'What truly distinguishes Cultivate Wellness is our specialty and expertise in pediatric care. We can achieve remarkable outcomes across a range of conditions, from soothing fussy and colicky babies to aiding chronically ill children, and supporting kids and teens facing sensory and spectrum challenges.',
     icon: 'baby',
     slug: '/pediatric',
   },
   {
     id: 'prenatal',
-    title: 'Prenatal Chiropractic',
-    description: 'Safe, effective care for expectant mothers throughout pregnancy.',
+    title: 'Prenatal',
+    description: 'The cultivation of a thriving and healthy family starts during the perinatal period. Trained in the Webster Technique along with a gentle, neuro-focused approach, we provide premier care and support for moms from conception to postnatal care.',
     icon: 'heart',
     slug: '/prenatal',
   },
   {
     id: 'family',
-    title: 'Family Wellness',
-    description: 'Comprehensive chiropractic care for the whole family at every stage of life.',
+    title: 'Family',
+    description: 'Parenting does not have to mean constant fatigue, stress, and burnout. At Cultivate Wellness, we ease the journey with neuro-focused chiropractic care, promoting restful sleep, increased energy, and emotional balance for the whole family!',
     icon: 'users',
     slug: '/family',
   },

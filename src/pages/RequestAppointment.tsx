@@ -27,7 +27,7 @@ export default function RequestAppointment() {
 
   return (
     <>
-      <section className="py-16 bg-gradient-to-br from-emerald-50 to-teal-50">
+      <section className="py-16 bg-gradient-to-br from-primary-light/10 to-primary-light/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center mb-6">
             Request an Appointment
@@ -41,8 +41,8 @@ export default function RequestAppointment() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-xl text-center">
-              <div className="bg-emerald-700 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <div className="bg-gradient-to-br from-primary-light/10 to-primary-light/10 p-8 rounded-xl text-center">
+              <div className="bg-primary-dark w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Calendar size={32} className="text-white" />
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Book Online</h2>
@@ -53,14 +53,14 @@ export default function RequestAppointment() {
                 href={SITE.janeUrlWithUtm}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block bg-emerald-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-emerald-800 transition"
+                className="inline-block bg-primary-dark text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-accent transition"
               >
                 Book Now
               </a>
             </div>
 
-            <div className="bg-gradient-to-br from-emerald-50 to-teal-50 p-8 rounded-xl text-center">
-              <div className="bg-emerald-700 w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
+            <div className="bg-gradient-to-br from-primary-light/10 to-primary-light/10 p-8 rounded-xl text-center">
+              <div className="bg-primary-dark w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
                 <Phone size={32} className="text-white" />
               </div>
               <h2 className="text-2xl font-bold text-gray-900 mb-4">Call Us</h2>
@@ -69,7 +69,7 @@ export default function RequestAppointment() {
               </p>
               <a
                 href={`tel:${SITE.phone.replace(/[^+\d]/g, '')}`}
-                className="inline-block bg-emerald-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-emerald-800 transition"
+                className="inline-block bg-primary-dark text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-accent transition"
               >
                 {SITE.phone}
               </a>
@@ -84,7 +84,7 @@ export default function RequestAppointment() {
             <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Office Hours</h2>
             <div className="bg-white p-8 rounded-xl shadow-sm">
               <div className="flex items-start gap-4 mb-6">
-                <Clock size={24} className="text-emerald-700 flex-shrink-0 mt-1" />
+                <Clock size={24} className="text-primary-dark flex-shrink-0 mt-1" />
                 <div className="space-y-2">
                   {SITE.hours.map((hour) => (
                     <p key={hour} className="text-gray-700 text-lg">

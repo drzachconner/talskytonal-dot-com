@@ -51,7 +51,7 @@ export default function Prenatal() {
 
   return (
     <>
-      <section className="py-16 bg-gradient-to-br from-emerald-50 to-teal-50">
+      <section className="py-16 bg-gradient-to-br from-primary-light/10 to-primary-light/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center mb-6">
             Prenatal Chiropractic Care
@@ -73,7 +73,7 @@ export default function Prenatal() {
               <div key={index} className="flex gap-4 p-6 bg-gray-50 rounded-xl">
                 <div className="flex-shrink-0">
                   <div className="bg-emerald-100 w-12 h-12 rounded-lg flex items-center justify-center">
-                    <benefit.icon size={24} className="text-emerald-700" />
+                    <benefit.icon size={24} className="text-primary-dark" />
                   </div>
                 </div>
                 <div>
@@ -98,7 +98,7 @@ export default function Prenatal() {
               This gentle technique has been shown to reduce the need for interventions during birth
               and support optimal fetal positioning.
             </p>
-            <p className="text-gray-700 font-medium text-emerald-700">
+            <p className="text-gray-700 font-medium text-primary-dark">
               Safe for all stages of pregnancy and recommended by midwives and OB-GYNs.
             </p>
           </div>

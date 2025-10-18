@@ -27,7 +27,7 @@ export default function NewPatientForms() {
 
   return (
     <>
-      <section className="py-16 bg-gradient-to-br from-emerald-50 to-teal-50">
+      <section className="py-16 bg-gradient-to-br from-primary-light/10 to-primary-light/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center mb-6">
             New Patient Forms
@@ -51,7 +51,7 @@ export default function NewPatientForms() {
               href={SITE.janeUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-emerald-700 text-white px-6 py-3 rounded-lg font-medium hover:bg-emerald-800 transition"
+              className="inline-flex items-center gap-2 bg-primary-dark text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-accent transition"
             >
               Access Patient Portal
               <ExternalLink size={20} />
@@ -62,31 +62,31 @@ export default function NewPatientForms() {
             <h3 className="text-xl font-bold text-gray-900">What You'll Need</h3>
             <ul className="space-y-3 text-gray-700">
               <li className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold text-sm">
+                <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-primary-dark font-bold text-sm">
                   1
                 </span>
                 <span>Personal contact information and emergency contact</span>
               </li>
               <li className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold text-sm">
+                <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-primary-dark font-bold text-sm">
                   2
                 </span>
                 <span>Insurance information (if applicable)</span>
               </li>
               <li className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold text-sm">
+                <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-primary-dark font-bold text-sm">
                   3
                 </span>
                 <span>Current medications and supplements</span>
               </li>
               <li className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold text-sm">
+                <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-primary-dark font-bold text-sm">
                   4
                 </span>
                 <span>Details about your health concerns and wellness goals</span>
               </li>
               <li className="flex gap-3">
-                <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-emerald-700 font-bold text-sm">
+                <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-primary-dark font-bold text-sm">
                   5
                 </span>
                 <span>Medical history, including past injuries and surgeries</span>
@@ -101,7 +101,7 @@ export default function NewPatientForms() {
               person, please call us at{' '}
               <a
                 href={`tel:${SITE.phone.replace(/[^+\d]/g, '')}`}
-                className="text-emerald-700 font-medium hover:underline"
+                className="text-primary-dark font-medium hover:underline"
               >
                 {SITE.phone}
               </a>

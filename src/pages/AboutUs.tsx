@@ -28,7 +28,7 @@ export default function AboutUs() {
 
   return (
     <>
-      <section className="py-16 bg-gradient-to-br from-emerald-50 to-teal-50">
+      <section className="py-16 bg-gradient-to-br from-primary-light/10 to-primary-light/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center mb-6">
             About Us
@@ -48,7 +48,7 @@ export default function AboutUs() {
             {team.map((member) => (
               <div key={member.id} className="bg-gray-50 p-8 rounded-xl">
                 <h3 className="text-xl font-bold text-gray-900 mb-2">{member.name}</h3>
-                <p className="text-emerald-700 font-medium mb-1">{member.title}</p>
+                <p className="text-primary-dark font-medium mb-1">{member.title}</p>
                 <p className="text-sm text-gray-600 mb-4">{member.credentials}</p>
                 <p className="text-gray-700">{member.bio}</p>
               </div>
@@ -63,7 +63,7 @@ export default function AboutUs() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-emerald-700">1</span>
+                <span className="text-2xl font-bold text-primary-dark">1</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Patient-Centered Care</h3>
               <p className="text-gray-700">
@@ -72,7 +72,7 @@ export default function AboutUs() {
             </div>
             <div className="text-center">
               <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-emerald-700">2</span>
+                <span className="text-2xl font-bold text-primary-dark">2</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Evidence-Based</h3>
               <p className="text-gray-700">
@@ -81,7 +81,7 @@ export default function AboutUs() {
             </div>
             <div className="text-center">
               <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-emerald-700">3</span>
+                <span className="text-2xl font-bold text-primary-dark">3</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Whole Family Wellness</h3>
               <p className="text-gray-700">

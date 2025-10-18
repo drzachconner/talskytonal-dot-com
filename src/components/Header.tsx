@@ -31,7 +31,11 @@ export default function Header() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center space-x-2">
-              <span className="text-xl font-bold text-emerald-700">{SITE.name}</span>
+              <img
+                src="https://durable.sfo3.cdn.digitaloceanspaces.com/blocks/2aE2dfGY0TcjvtWq00bdkwCtcKe2ZEQj3V2unBuhcuxkYK7sGEUUgOMJyGMId8Rg.png"
+                alt={SITE.name}
+                className="h-12 object-contain"
+              />
             </Link>
 
             <div className="hidden md:flex items-center space-x-6">
@@ -41,8 +45,8 @@ export default function Header() {
                   to={link.to}
                   className={`text-sm font-medium transition ${
                     isActive(link.to)
-                      ? 'text-emerald-700 border-b-2 border-emerald-700'
-                      : 'text-gray-700 hover:text-emerald-700'
+                      ? 'text-primary-dark border-b-2 border-primary-dark'
+                      : 'text-gray-900 hover:text-primary'
                   }`}
                 >
                   {link.label}
@@ -52,7 +56,7 @@ export default function Header() {
                 href={SITE.janeUrlWithUtm}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-emerald-800 transition"
+                className="bg-primary-dark text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-accent transition"
               >
                 Book Appointment
               </a>
@@ -77,8 +81,8 @@ export default function Header() {
                   onClick={() => setIsMenuOpen(false)}
                   className={`block px-4 py-2 rounded-lg text-sm font-medium ${
                     isActive(link.to)
-                      ? 'bg-emerald-50 text-emerald-700'
-                      : 'text-gray-700 hover:bg-gray-50'
+                      ? 'bg-primary-light/10 text-primary-dark'
+                      : 'text-gray-900 hover:bg-gray-50'
                   }`}
                 >
                   {link.label}
@@ -88,7 +92,7 @@ export default function Header() {
                 href={SITE.janeUrlWithUtm}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="block mx-4 mt-4 bg-emerald-700 text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-emerald-800 transition text-center"
+                className="block mx-4 mt-4 bg-primary-dark text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-accent transition text-center"
               >
                 Book Appointment
               </a>

@@ -52,9 +52,9 @@ export default function Home() {
   return (
     <>
       <Hero
-        title="Welcome to Cultivate Wellness Chiropractic"
-        subtitle="Expert chiropractic care for families, children, and expectant mothers. Personalized treatment plans to help you thrive."
-        ctaText="Request Your Appointment"
+        title="Experts in Drug-Free Pediatric, Prenatal, and Family Health Care!"
+        subtitle={`"Our primary focus is your family's health and happiness. We specialize in gentle, neuro-focused chiropractic care. Whether the journey involves autism, epilepsy, special needs, or well baby checks and family wellness, our team is more than prepared to cultivate the best healing experience possible." - Dr. Zach Conner, Rochester Hills, MI Chiropractor`}
+        ctaText="Request an Appointment"
         ctaLink={SITE.janeUrlWithUtm}
       />
       <ServicesGrid />
