@@ -5,8 +5,8 @@ import { breadcrumbJsonLd } from '../lib/breadcrumbs';
 
 export default function RHKNGuide() {
   useSeo({
-    title: 'RHKN Guide - Free Resource',
-    description: 'Download our free RHKN guide with valuable insights for your family.',
+    title: 'Raising Healthy Kids Naturally - Free Guide',
+    description: 'Download our free Raising Healthy Kids Naturally guide with valuable insights for your family.',
     canonical: '/rhkn-guide',
   });
 
@@ -15,7 +15,7 @@ export default function RHKNGuide() {
     breadcrumbScript.type = 'application/ld+json';
     breadcrumbScript.text = JSON.stringify(breadcrumbJsonLd([
       { name: 'Home', url: `https://${SITE.domain}/` },
-      { name: 'RHKN Guide', url: `https://${SITE.domain}/rhkn-guide` },
+      { name: 'Raising Healthy Kids Naturally', url: `https://${SITE.domain}/rhkn-guide` },
     ]));
     document.head.appendChild(breadcrumbScript);
 
@@ -29,30 +29,28 @@ export default function RHKNGuide() {
       <section className="py-16 bg-gradient-to-br from-primary-light/10 to-primary-light/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center mb-6">
-            RHKN Guide
+            Raising Healthy Kids Naturally
           </h1>
           <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto">
-            Get your free RHKN guide with expert insights and practical advice.
+            Get your free guide with expert insights and practical advice for raising healthy kids naturally.
           </p>
         </div>
       </section>
 
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gray-50 p-8 rounded-xl mb-8">
+          <div className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Download Your Free Guide</h2>
             <p className="text-gray-700 mb-6">
               Fill out the form below to receive your guide instantly.
             </p>
-            <div className="bg-white rounded-xl shadow-sm p-12">
-              <iframe
-                src="https://form.jotform.com/232755576450159"
-                width="100%"
-                height="700"
-                style={{ border: 0 }}
-                title="RHKN Guide"
-              />
-            </div>
+            <iframe
+              src="https://form.jotform.com/232755576450159"
+              width="100%"
+              height="700"
+              style={{ border: 0 }}
+              title="Raising Healthy Kids Naturally Guide"
+            />
           </div>
         </div>
       </section>

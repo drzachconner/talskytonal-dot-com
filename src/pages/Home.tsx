@@ -197,8 +197,7 @@ export default function Home() {
               <img
                 src="https://cdn.durable.co/blocks/27aMPrLzLH2FgQbRav4hq5zJT5fnWhxd1wwNKTKpYWHydyjWGz4HW8puySefMwjw.jpg"
                 alt="Dr. Zach Conner"
-                className="w-full"
-                style={{ filter: 'drop-shadow(0 20px 25px rgba(0, 0, 0, 0.15)) drop-shadow(0 10px 10px rgba(0, 0, 0, 0.1))' }}
+                className="w-full rounded-3xl shadow-2xl"
               />
             </div>
             <div>

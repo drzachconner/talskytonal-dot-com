@@ -110,15 +110,13 @@ export default function EventsWorkshops() {
               <p className="text-lg text-gray-700 mb-6 text-center">
                 Sign up to be notified when our next workshop is scheduled.
               </p>
-              <div className="bg-white rounded-lg p-8">
-                <iframe
-                  src="https://form.jotform.com/232585320612147"
-                  width="100%"
-                  height="500"
-                  style={{ border: 0 }}
-                  title="Workshop Notification Signup"
-                />
-              </div>
+              <iframe
+                src="https://form.jotform.com/232585320612147"
+                width="100%"
+                height="500"
+                style={{ border: 0 }}
+                title="Workshop Notification Signup"
+              />
             </div>
           </div>
         </div>
@@ -142,15 +140,6 @@ export default function EventsWorkshops() {
               </p>
             </div>
 
-            <div className="bg-primary-light/10 p-8 rounded-xl">
-              <h3 className="text-2xl font-heading font-bold text-gray-900 mb-4">
-                What Parents Are Saying
-              </h3>
-              <blockquote className="text-lg text-gray-700 italic">
-                "Dr. Zach's workshop completely changed how I understood my child's health. The information was practical, easy to understand, and gave me hope for my son's future. I can't recommend these workshops enough!"
-              </blockquote>
-              <p className="text-gray-600 mt-4">— Parent of a Special Needs Child</p>
-            </div>
           </div>
         </div>
       </section>

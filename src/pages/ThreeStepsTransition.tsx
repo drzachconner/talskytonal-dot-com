@@ -39,21 +39,19 @@ export default function ThreeStepsTransition() {
 
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gray-50 p-8 rounded-xl mb-8">
+          <div className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Download Your Free Guide</h2>
             <p className="text-gray-700 mb-6">
               Learn three essential steps to support your child through major life transitions.
               Fill out the form below to receive your guide instantly.
             </p>
-            <div className="bg-white rounded-xl shadow-sm p-12">
-              <iframe
-                src="https://form.jotform.com/232885887287176"
-                width="100%"
-                height="700"
-                style={{ border: 0 }}
-                title="3 Steps to a Smooth Transition Guide"
-              />
-            </div>
+            <iframe
+              src="https://form.jotform.com/232885887287176"
+              width="100%"
+              height="700"
+              style={{ border: 0 }}
+              title="3 Steps to a Smooth Transition Guide"
+            />
           </div>
         </div>
       </section>

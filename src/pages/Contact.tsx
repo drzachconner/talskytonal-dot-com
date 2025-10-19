@@ -131,15 +131,13 @@ export default function Contact() {
 
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
-              <div className="bg-white rounded-xl shadow-sm p-12">
-                <iframe
-                  src="https://form.jotform.com/232538433981058"
-                  width="100%"
-                  height="700"
-                  style={{ border: 0 }}
-                  title="Contact Form"
-                />
-              </div>
+              <iframe
+                src="https://form.jotform.com/232538433981058"
+                width="100%"
+                height="700"
+                style={{ border: 0 }}
+                title="Contact Form"
+              />
             </div>
           </div>
         </div>

@@ -39,22 +39,20 @@ export default function NewPatientForms() {
 
       <section className="py-16 bg-white">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-gray-50 p-8 rounded-xl mb-8">
+          <div className="mb-8">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Complete Your Forms Online</h2>
             <p className="text-gray-700 mb-6">
               Our secure online system makes it easy to provide your health history and other
               necessary information before your appointment. This allows us to spend more time
               focused on your care during your visit.
             </p>
-            <div className="bg-white rounded-xl shadow-sm p-12">
-              <iframe
-                src="https://form.jotform.com/232587413942158"
-                width="100%"
-                height="700"
-                style={{ border: 0 }}
-                title="New Patient Forms"
-              />
-            </div>
+            <iframe
+              src="https://form.jotform.com/232587413942158"
+              width="100%"
+              height="700"
+              style={{ border: 0 }}
+              title="New Patient Forms"
+            />
           </div>
 
           <div className="space-y-6">
