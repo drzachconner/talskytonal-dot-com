@@ -46,13 +46,15 @@ export default function NewPatientForms() {
               necessary information before your appointment. This allows us to spend more time
               focused on your care during your visit.
             </p>
-            <iframe
-              src="https://form.jotform.com/232587413942158"
-              width="100%"
-              height="700"
-              style={{ border: 0 }}
-              title="New Patient Forms"
-            />
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+              <iframe
+                src="https://form.jotform.com/232587413942158"
+                width="100%"
+                height="700"
+                style={{ border: 0 }}
+                title="New Patient Forms"
+              />
+            </div>
           </div>
 
           <div className="space-y-6">

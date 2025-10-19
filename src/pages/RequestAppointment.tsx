@@ -46,13 +46,15 @@ export default function RequestAppointment() {
               <p className="text-gray-700 mb-6 text-center">
                 Fill out the form below or call us at <a href={`tel:${SITE.phone.replace(/[^+\d]/g, '')}`} className="text-primary-dark font-medium hover:underline">{SITE.phone}</a>
               </p>
-              <iframe
-                src="https://form.jotform.com/232578527282161"
-                width="100%"
-                height="700"
-                style={{ border: 0 }}
-                title="Request Appointment"
-              />
+              <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+                <iframe
+                  src="https://form.jotform.com/232578527282161"
+                  width="100%"
+                  height="700"
+                  style={{ border: 0 }}
+                  title="Request Appointment"
+                />
+              </div>
             </div>
           </div>
         </div>

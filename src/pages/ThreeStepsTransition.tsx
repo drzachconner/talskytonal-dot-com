@@ -45,13 +45,15 @@ export default function ThreeStepsTransition() {
               Learn three essential steps to support your child through major life transitions.
               Fill out the form below to receive your guide instantly.
             </p>
-            <iframe
-              src="https://form.jotform.com/232885887287176"
-              width="100%"
-              height="700"
-              style={{ border: 0 }}
-              title="3 Steps to a Smooth Transition Guide"
-            />
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+              <iframe
+                src="https://form.jotform.com/232885887287176"
+                width="100%"
+                height="700"
+                style={{ border: 0 }}
+                title="3 Steps to a Smooth Transition Guide"
+              />
+            </div>
           </div>
         </div>
       </section>

@@ -110,13 +110,15 @@ export default function EventsWorkshops() {
               <p className="text-lg text-gray-700 mb-6 text-center">
                 Sign up to be notified when our next workshop is scheduled.
               </p>
-              <iframe
-                src="https://form.jotform.com/232585320612147"
-                width="100%"
-                height="500"
-                style={{ border: 0 }}
-                title="Workshop Notification Signup"
-              />
+              <div className="bg-white rounded-lg overflow-hidden">
+                <iframe
+                  src="https://form.jotform.com/232585320612147"
+                  width="100%"
+                  height="500"
+                  style={{ border: 0 }}
+                  title="Workshop Notification Signup"
+                />
+              </div>
             </div>
           </div>
         </div>
