@@ -10,6 +10,7 @@ export default function ContactForm() {
     e.preventDefault();
     setLoading(true);
     setError('');
+    setSuccess(false);
 
     const formData = new FormData(e.currentTarget);
     const rawData = Object.fromEntries(formData);
@@ -25,6 +26,7 @@ export default function ContactForm() {
       const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
       const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
+      console.log('=== Contact Form Debug ===');
       console.log('Supabase URL:', supabaseUrl);
       console.log('Has Anon Key:', !!supabaseAnonKey);
       console.log('Form data:', { ...data, message: data.message?.substring(0, 50) });
@@ -46,26 +48,38 @@ export default function ContactForm() {
       });
 
       console.log('Response status:', response.status);
-      console.log('Response headers:', Object.fromEntries(response.headers.entries()));
+      console.log('Response OK:', response.ok);
 
       if (!response.ok) {
         const errorText = await response.text();
-        console.error('Response error text:', errorText);
-        throw new Error(`HTTP ${response.status}: ${errorText}`);
+        console.error('Response error:', errorText);
+        throw new Error(`Server returned ${response.status}`);
       }
 
-      const result = await response.json();
-      console.log('Response result:', result);
+      const responseText = await response.text();
+      console.log('Response text:', responseText);
 
-      if (result.ok) {
+      let result;
+      try {
+        result = JSON.parse(responseText);
+        console.log('Parsed result:', result);
+      } catch {
+        console.error('Failed to parse JSON response');
+        throw new Error('Invalid response from server');
+      }
+
+      if (result.ok || response.status === 200) {
+        console.log('SUCCESS! Showing success message');
         setSuccess(true);
         e.currentTarget.reset();
         setTimeout(() => setSuccess(false), 5000);
       } else {
-        setError(result.error || 'Something went wrong. Please try again.');
+        console.error('Result not OK:', result);
+        throw new Error(result.error || 'Failed to send');
       }
     } catch (err) {
-      console.error('Contact form error:', err);
+      console.error('=== Contact Form Error ===');
+      console.error(err);
       setError('Failed to send. Please check your connection or call us directly.');
     } finally {
       setLoading(false);
