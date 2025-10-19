@@ -18,11 +18,17 @@ export default function ContactForm() {
       const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
       const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
 
+      console.log('Supabase URL:', supabaseUrl);
+      console.log('Has Anon Key:', !!supabaseAnonKey);
+
       if (!supabaseUrl || !supabaseAnonKey) {
         throw new Error('Supabase configuration missing');
       }
 
-      const response = await fetch(`${supabaseUrl}/functions/v1/send-contact-email`, {
+      const apiUrl = `${supabaseUrl}/functions/v1/send-contact-email`;
+      console.log('Calling API:', apiUrl);
+
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -31,9 +37,12 @@ export default function ContactForm() {
         body: JSON.stringify(data),
       });
 
-      const result = await response.json();
+      console.log('Response status:', response.status);
 
-      if (result.ok) {
+      const result = await response.json();
+      console.log('Response result:', result);
+
+      if (result.ok || response.ok) {
         setSuccess(true);
         e.currentTarget.reset();
         setTimeout(() => setSuccess(false), 5000);
@@ -42,7 +51,7 @@ export default function ContactForm() {
       }
     } catch (err) {
       console.error('Contact form error:', err);
-      setError('Failed to send. Please check your connection.');
+      setError('Failed to send. Please check your connection or call us directly.');
     } finally {
       setLoading(false);
     }
