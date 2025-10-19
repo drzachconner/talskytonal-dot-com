@@ -31,7 +31,7 @@ export default function AboutUs() {
       <section className="relative py-32 bg-gray-900">
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/about-graphic.png"
+            src="/images/about-graphic.webp"
             alt="About Us"
             className="w-full h-full object-cover opacity-60"
           />

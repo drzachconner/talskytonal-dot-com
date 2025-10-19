@@ -33,7 +33,7 @@ export default function Header() {
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center space-x-2">
               <img
-                src="/images/logo.png"
+                src="/images/logo.webp"
                 alt={SITE.name}
                 className="h-12 object-contain"
               />

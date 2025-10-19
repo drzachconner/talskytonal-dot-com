@@ -30,25 +30,25 @@ export default function FreeGuidesForParents() {
     {
       title: 'Raising Healthy Kids Naturally',
       description: 'Discover natural approaches to support your child\'s overall health and wellness.',
-      image: '/images/image.png',
+      image: '/images/rhkn-guide.webp',
       link: '/rhkn-guide',
     },
     {
       title: '3 Ways to Improve Your Child\'s Sleep',
       description: 'Simple, effective strategies to help your child sleep better naturally.',
-      image: 'https://images.pexels.com/photos/6899388/pexels-photo-6899388.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: '/images/sleep-guide.webp',
       link: '/3-ways-to-sleep',
     },
     {
       title: '3 Ways to Get Your Child Pooping',
       description: 'Natural solutions to support your child\'s digestive health and regularity.',
-      image: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: '/images/pooping-guide.webp',
       link: '/3-ways-to-poop',
     },
     {
       title: '3 Steps to Smoothing Transitions for Sensory Kids',
       description: 'Essential strategies to help your child navigate major life changes with ease.',
-      image: 'https://images.pexels.com/photos/8613317/pexels-photo-8613317.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
+      image: '/images/transitions-guide.webp',
       link: '/3-steps-transition',
     },
   ];
@@ -58,7 +58,7 @@ export default function FreeGuidesForParents() {
       <section className="relative py-32 bg-gray-900 min-h-[400px] flex items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/guides-hero.png"
+            src="/images/guides-hero-new.webp"
             alt="Free Guides for Parents"
             className="w-full h-full object-cover"
           />

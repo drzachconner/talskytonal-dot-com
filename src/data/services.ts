@@ -5,7 +5,7 @@ export const services = [
     description: 'What truly distinguishes Cultivate Wellness is our specialty and expertise in pediatric care. We can achieve remarkable outcomes across a range of conditions, from soothing fussy and colicky babies to aiding chronically ill children, and supporting kids and teens facing sensory and spectrum challenges.',
     icon: 'baby',
     slug: '/pediatric',
-    image: '/images/pediatric-care.jpg',
+    image: '/images/pediatric-care.webp',
   },
   {
     id: 'prenatal',

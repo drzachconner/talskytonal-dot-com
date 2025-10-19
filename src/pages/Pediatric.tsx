@@ -54,7 +54,7 @@ export default function Pediatric() {
       <section className="relative py-32 bg-gray-900">
         <div className="absolute inset-0">
           <img
-            src="/images/pediatric-care.jpg"
+            src="/images/pediatric-care.webp"
             alt="Pediatric Chiropractic Care"
             className="w-full h-full object-cover opacity-40"
           />

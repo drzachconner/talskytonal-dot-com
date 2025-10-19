@@ -53,7 +53,7 @@ export default function Home() {
     <>
       <section className="relative bg-gray-800">
         <img
-          src="/images/hero-family.jpg"
+          src="/images/hero-family.webp"
           alt="Cultivate Wellness Chiropractic"
           className="w-full h-auto"
         />
@@ -80,7 +80,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-20 min-h-[400px] flex items-center justify-center" style={{ backgroundImage: 'url(/images/background-pattern.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#5a7a99' }}>
+      <section className="relative py-20 min-h-[400px] flex items-center justify-center" style={{ backgroundImage: 'url(/images/background-pattern.webp)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#5a7a99' }}>
         <div className="absolute inset-0 z-0" style={{ backgroundColor: 'rgba(90, 122, 153, 0.85)' }} />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xl sm:text-2xl text-white mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -112,7 +112,7 @@ export default function Home() {
             >
               <div className="aspect-video overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=800&h=600&fit=crop"
+                  src="/images/rhkn-guide.webp"
                   alt="Raising Healthy Kids Naturally"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -130,7 +130,7 @@ export default function Home() {
             >
               <div className="aspect-video overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&h=600&fit=crop"
+                  src="/images/sleep-guide.webp"
                   alt="3 Ways to Improve Your Child's Sleep"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -148,7 +148,7 @@ export default function Home() {
             >
               <div className="aspect-video overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&h=600&fit=crop"
+                  src="/images/pooping-guide.webp"
                   alt="3 Ways to Get Your Child Pooping"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -166,7 +166,7 @@ export default function Home() {
             >
               <div className="aspect-video overflow-hidden">
                 <img
-                  src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=800&h=600&fit=crop"
+                  src="/images/transitions-guide.webp"
                   alt="3 Steps to Smoothing Transitions for Sensory Kids"
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />
@@ -195,7 +195,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="/images/dr-zach.jpg"
+                src="/images/dr-zach.webp"
                 alt="Dr. Zach Conner"
                 className="w-full rounded-3xl shadow-2xl"
               />
@@ -230,7 +230,7 @@ export default function Home() {
             </div>
             <div>
               <img
-                src="/images/family-adjustment.jpeg"
+                src="/images/family-adjustment.webp"
                 alt="Family with children by the lake"
                 className="rounded-lg shadow-lg w-full"
               />
@@ -244,7 +244,7 @@ export default function Home() {
           <h2 className="text-3xl font-heading font-bold text-gray-900 mb-8 text-center">Office Hours</h2>
           <div className="flex justify-center">
             <img
-              src="/images/office-hours.png"
+              src="/images/office-hours.webp"
               alt="Office Hours Schedule"
               className="w-full max-w-2xl rounded-xl shadow-lg"
             />
