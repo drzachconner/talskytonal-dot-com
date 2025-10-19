@@ -1,6 +1,6 @@
 import { useSeo } from '../hooks/useSeo';
 import { SITE } from '../data/site';
-import Hero from '../components/Hero';
+import { Link } from 'react-router-dom';
 import ServicesGrid from '../components/ServicesGrid';
 import TestimonialSlider from '../components/TestimonialSlider';
 import CTABanner from '../components/CTABanner';
@@ -51,13 +51,46 @@ export default function Home() {
 
   return (
     <>
-      <Hero
-        title="Experts in Drug-Free Pediatric, Prenatal, and Family Health Care!"
-        subtitle={`"Our primary focus is your family's health and happiness. We specialize in gentle, neuro-focused chiropractic care. Whether the journey involves autism, epilepsy, special needs, or well baby checks and family wellness, our team is more than prepared to cultivate the best healing experience possible." - Dr. Zach Conner, Rochester Hills, MI Chiropractor`}
-        ctaText="Request an Appointment"
-        ctaLink={SITE.janeUrlWithUtm}
-        backgroundImage="https://cdn.durable.co/covers/37KpAJ8KVYNfjI0BMc0oCSPXSu88DrANH0ncyjkgtjGTqbBujHTXPPVlYD8e2wWG.jpg"
-      />
+      <section className="relative min-h-[600px] flex items-center justify-center bg-gray-900">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1476480862126-209bfaa8edc8?w=1200"
+            alt="Family wellness"
+            className="w-full h-full object-cover opacity-50"
+          />
+        </div>
+        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+          <div className="mb-8">
+            <div className="text-8xl sm:text-9xl font-bold text-white/20 tracking-wider mb-4" style={{ fontFamily: 'serif' }}>
+              CWC
+            </div>
+            <div className="text-2xl sm:text-3xl md:text-4xl font-script text-white" style={{ fontFamily: 'cursive', fontStyle: 'italic' }}>
+              Cultivate Wellness Chiropractic
+            </div>
+          </div>
+
+          <div className="bg-white py-12 px-6 sm:px-12 rounded-lg shadow-2xl max-w-5xl mx-auto">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Experts in Drug-Free Pediatric, Prenatal, and Family Health Care!
+            </h1>
+            <p className="text-lg sm:text-xl text-gray-700 mb-8 leading-relaxed">
+              "Our primary focus is your family's health and happiness. We specialize in <span className="text-primary font-semibold">gentle, neuro-focused chiropractic care</span>. Whether the journey involves autism, epilepsy, special needs, or well baby checks and family wellness, our team is more than prepared to cultivate the best healing experience possible."
+            </p>
+            <p className="text-base text-gray-600 mb-8">
+              - Dr. Zach Conner<br />
+              Rochester Hills, MI Chiropractor
+            </p>
+            <a
+              href={SITE.janeUrlWithUtm}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block bg-primary-dark text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-primary-accent transition shadow-lg"
+            >
+              Workshops For Parents
+            </a>
+          </div>
+        </div>
+      </section>
 
       <section className="py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -72,17 +105,25 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-16 bg-primary-dark text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-xl mb-8 max-w-4xl mx-auto">
+      <section className="relative py-20 min-h-[400px] flex items-center justify-center">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://cdn.durable.co/blocks/371f4hzULjYKvNJXPbd9LKAf08UY16iAU2rWZqVtvEyzDOX4wT9r5SBoDWDEGw88.png"
+            alt="Background pattern"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 z-0 bg-primary/80" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <p className="text-xl sm:text-2xl text-white mb-8 max-w-4xl mx-auto leading-relaxed">
             Our team is skilled in <strong>Pediatric, Prenatal, and Family Chiropractic</strong>. Click the button to learn how we care for you and your family!
           </p>
-          <a
-            href="/new-patient-center"
-            className="inline-block bg-white text-primary-dark px-8 py-4 rounded-lg font-medium hover:bg-gray-100 transition"
+          <Link
+            to="/new-patient-center"
+            className="inline-block bg-primary-dark text-white px-10 py-4 rounded-lg text-lg font-medium hover:bg-primary-accent transition shadow-xl"
           >
             New Patient Center
-          </a>
+          </Link>
         </div>
       </section>
 

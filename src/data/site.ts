@@ -3,7 +3,7 @@ export const SITE = {
   domain: 'cultivatewellnesschiro.com',
   phone: '+1-248-221-1118',
   phoneDisplay: '(248) 221-1118',
-  email: 'admin@cultivatewellnesschiro.com',
+  email: 'info@cultivatewellnesschiro.com',
   address: {
     street: '1460 Walton Blvd., Ste. 210',
     city: 'Rochester Hills',

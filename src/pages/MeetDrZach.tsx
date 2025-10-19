@@ -28,44 +28,26 @@ export default function MeetDrZach() {
 
   return (
     <>
-      <section className="relative py-32 bg-gray-900 min-h-[400px] flex items-center">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://cdn.durable.co/blocks/3bKnIpzL4kwKqH9yRZCJIfpZOU5u8XIQdFmsY1J1Wspti1bSjSms8jgjI39fdgJA.jpg"
-            alt="Dr. Zach Conner"
-            className="w-full h-full object-cover"
-          />
-        </div>
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-primary-dark/70 to-primary/60" />
-        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4 text-white">
-            Welcome to Cultivate Wellness
-          </h1>
-          <p className="text-2xl font-heading text-white">Dr. Zach Conner</p>
-        </div>
-      </section>
-
       <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-start mb-16">
-            <div>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <div className="w-64 h-64 mx-auto mb-8 rounded-3xl overflow-hidden shadow-2xl">
               <img
                 src="https://durable.sfo3.cdn.digitaloceanspaces.com/blocks/2b4L2vpozoEo2IDaBFs5r0UeeUhsUu4oLJwZWpagYsGiybDotrNvrclBQgaXU0ac.jpg"
                 alt="Dr. Zach Conner"
-                className="rounded-xl shadow-lg w-full"
+                className="w-full h-full object-cover"
               />
             </div>
-            <div>
-              <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-                Every day since my graduation from Life University in Georgia as a chiropractor, I have been blessed with the opportunity to contribute to the transformative stories and results we see with the help of neurologically-focused chiropractic care. These stories inspire me and reinforce my belief in the potential of the human body to heal and optimize itself. This belief is not theoretical but deeply personal, born from my own experiences with the gentle neurologically-focused approach that I passionately advocate and teach.
-              </p>
-              <Link
-                to="/new-patient-center"
-                className="inline-block bg-primary-dark text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-accent transition"
-              >
-                New Patient Center
-              </Link>
-            </div>
+            <h1 className="text-4xl font-heading font-bold text-gray-900 mb-2">
+              Welcome to Cultivate Wellness
+            </h1>
+            <p className="text-2xl text-gray-700 mb-8">Dr. Zach Conner</p>
+          </div>
+
+          <div className="text-left">
+            <p className="text-lg text-gray-700 mb-8 leading-relaxed">
+              Every day since my graduation from Life University in Georgia as a chiropractor, I have been blessed with the opportunity to contribute to the transformative stories and results we see with the help of neurologically-focused chiropractic care. These stories inspire me and reinforce my belief in the potential of the human body to heal and optimize itself. This belief is not theoretical but deeply personal, born from my own experiences with the gentle neurologically-focused approach that I passionately advocate and teach.
+            </p>
           </div>
 
           <div className="max-w-4xl mx-auto space-y-12">

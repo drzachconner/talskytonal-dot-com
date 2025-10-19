@@ -140,21 +140,18 @@ export default function Contact() {
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <a
-            href={`https://maps.google.com/?q=${encodeURIComponent(
-              SITE.address.street + ', ' + SITE.address.city + ', ' + SITE.address.region
-            )}`}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="block max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition"
-          >
-            <div className="bg-gray-300 w-full h-96 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin size={48} className="text-gray-600 mx-auto mb-4" />
-                <p className="text-gray-700 font-medium">Click to view map</p>
-              </div>
-            </div>
-          </a>
+          <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2939.8361896442847!2d-83.16216!3d42.682030099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824e9a27e8c8e8b%3A0x8d8c8d8c8d8c8d8c!2s1460%20Walton%20Blvd%20%23210%2C%20Rochester%20Hills%2C%20MI%2048309!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+              width="100%"
+              height="450"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Cultivate Wellness Chiropractic Location"
+            />
+          </div>
         </div>
       </section>
     </>
