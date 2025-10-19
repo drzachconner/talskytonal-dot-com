@@ -53,7 +53,7 @@ export default function Home() {
     <>
       <section className="relative bg-gray-800">
         <img
-          src="https://cdn.durable.co/blocks/1a4RLvjsHvDuZKVCIbjEIiB3izNbu4cVYkP8qionEumB5txV9BNVrodGsNZhXuoM.jpg"
+          src="/images/hero-family.jpg"
           alt="Cultivate Wellness Chiropractic"
           className="w-full h-auto"
         />
@@ -80,7 +80,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-20 min-h-[400px] flex items-center justify-center" style={{ backgroundImage: 'url(https://durable.sfo3.cdn.digitaloceanspaces.com/logos/1brtRj3dCKQ5bYIfXw3ldH6CN4t5jXQ9lSTcuDIUXjwTK1Uzs9Vdl2e0HNwd6lj2.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#5a7a99' }}>
+      <section className="relative py-20 min-h-[400px] flex items-center justify-center" style={{ backgroundImage: 'url(/images/background-pattern.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#5a7a99' }}>
         <div className="absolute inset-0 z-0" style={{ backgroundColor: 'rgba(90, 122, 153, 0.85)' }} />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xl sm:text-2xl text-white mb-8 max-w-4xl mx-auto leading-relaxed">
@@ -195,7 +195,7 @@ export default function Home() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <img
-                src="https://cdn.durable.co/blocks/27aMPrLzLH2FgQbRav4hq5zJT5fnWhxd1wwNKTKpYWHydyjWGz4HW8puySefMwjw.jpg"
+                src="/images/dr-zach.jpg"
                 alt="Dr. Zach Conner"
                 className="w-full rounded-3xl shadow-2xl"
               />
@@ -230,7 +230,7 @@ export default function Home() {
             </div>
             <div>
               <img
-                src="https://durable.sfo3.cdn.digitaloceanspaces.com/shutterstock/bjrLAqwwCHpyKr9vVlbWZgKfVrcikmMHwWsmF1qyLQTBbJGoIvUwUkZOzWc542xw.jpeg"
+                src="/images/family-adjustment.jpeg"
                 alt="Family with children by the lake"
                 className="rounded-lg shadow-lg w-full"
               />

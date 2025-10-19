@@ -54,7 +54,7 @@ export default function Pediatric() {
       <section className="relative py-32 bg-gray-900">
         <div className="absolute inset-0">
           <img
-            src="https://cdn.durable.co/blocks/czT50DIPfXoSOm0RccUMjglrHK1aNV6r5reUPlUHfiFAFxiORylUWju8rpRe4rhx.jpg"
+            src="/images/pediatric-care.jpg"
             alt="Pediatric Chiropractic Care"
             className="w-full h-full object-cover opacity-40"
           />

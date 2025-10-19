@@ -33,7 +33,7 @@ export default function MeetDrZach() {
           <div className="text-center mb-12">
             <div className="w-64 h-64 mx-auto mb-8 rounded-3xl overflow-hidden shadow-2xl">
               <img
-                src="https://durable.sfo3.cdn.digitaloceanspaces.com/blocks/2b4L2vpozoEo2IDaBFs5r0UeeUhsUu4oLJwZWpagYsGiybDotrNvrclBQgaXU0ac.jpg"
+                src="/images/meet-dr-zach-hero.jpg"
                 alt="Dr. Zach Conner"
                 className="w-full h-full object-cover"
               />
@@ -105,7 +105,7 @@ export default function MeetDrZach() {
 
           <div className="max-w-4xl mx-auto mt-12 text-center">
             <img
-              src="https://durable.sfo3.cdn.digitaloceanspaces.com/blocks/bmln5G5HT9OMFnRo8Y0JbobHK16LdqjTx3RsCf8H7KURnCYVpLL1hXekqzi2t6oF.jpg"
+              src="/images/meet-dr-zach-clinic.jpg"
               alt="Dr. Zach with family"
               className="rounded-xl shadow-lg w-full mb-8"
             />

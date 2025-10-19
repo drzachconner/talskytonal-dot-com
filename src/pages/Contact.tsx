@@ -30,7 +30,7 @@ export default function Contact() {
       <section className="relative py-32 bg-gray-900 min-h-[400px] flex items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://cdn.durable.co/covers/37KpAJ8KVYNfjI0BMc0oCSPXSu88DrANH0ncyjkgtjGTqbBujHTXPPVlYD8e2wWG.jpg"
+            src="/images/contact-hero.jpg"
             alt="Contact Us"
             className="w-full h-full object-cover"
           />

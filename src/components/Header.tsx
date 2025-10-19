@@ -33,7 +33,7 @@ export default function Header() {
           <div className="flex justify-between items-center h-16">
             <Link to="/" className="flex items-center space-x-2">
               <img
-                src="https://durable.sfo3.cdn.digitaloceanspaces.com/blocks/2aE2dfGY0TcjvtWq00bdkwCtcKe2ZEQj3V2unBuhcuxkYK7sGEUUgOMJyGMId8Rg.png"
+                src="/images/logo.png"
                 alt={SITE.name}
                 className="h-12 object-contain"
               />
