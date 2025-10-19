@@ -51,24 +51,12 @@ export default function Home() {
 
   return (
     <>
-      <section className="relative py-20 bg-gray-800">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="https://cdn.durable.co/blocks/1a4RLvjsHvDuZKVCIbjEIiB3izNbu4cVYkP8qionEumB5txV9BNVrodGsNZhXuoM.jpg"
-            alt="Child receiving chiropractic care"
-            className="w-full h-full object-cover opacity-60"
-          />
-        </div>
-        <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-          <div className="mb-8">
-            <div className="text-7xl sm:text-8xl md:text-9xl font-bold text-white/30 tracking-widest mb-4" style={{ fontFamily: 'Georgia, serif', letterSpacing: '0.1em' }}>
-              CWC
-            </div>
-            <div className="text-2xl sm:text-3xl md:text-4xl text-white" style={{ fontFamily: 'Brush Script MT, cursive', fontStyle: 'italic' }}>
-              Cultivate Wellness Chiropractic
-            </div>
-          </div>
-        </div>
+      <section className="relative bg-gray-800">
+        <img
+          src="https://cdn.durable.co/blocks/1a4RLvjsHvDuZKVCIbjEIiB3izNbu4cVYkP8qionEumB5txV9BNVrodGsNZhXuoM.jpg"
+          alt="Cultivate Wellness Chiropractic"
+          className="w-full h-auto"
+        />
       </section>
 
       <section className="py-16 bg-white">
@@ -116,7 +104,8 @@ export default function Home() {
               <img
                 src="https://cdn.durable.co/blocks/27aMPrLzLH2FgQbRav4hq5zJT5fnWhxd1wwNKTKpYWHydyjWGz4HW8puySefMwjw.jpg"
                 alt="Dr. Zach Conner"
-                className="rounded-lg shadow-lg w-full"
+                className="w-full"
+                style={{ filter: 'drop-shadow(0 20px 25px rgba(0, 0, 0, 0.15)) drop-shadow(0 10px 10px rgba(0, 0, 0, 0.1))' }}
               />
             </div>
             <div>

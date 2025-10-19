@@ -28,33 +28,42 @@ export default function AboutUs() {
 
   return (
     <>
-      <section className="py-16 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center mb-12">
+      <section className="relative py-32 bg-gray-900">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://durable.sfo3.cdn.digitaloceanspaces.com/blocks/35no5DSUbJlzR74412b3Qke9pjt1FR1nRijXq0SbwUSHDtWtTYocYESyaXATZvoN.png"
+            alt="About Us"
+            className="w-full h-full object-cover opacity-60"
+          />
+        </div>
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-5xl sm:text-6xl font-bold text-white mb-6">
             About Us
           </h1>
+          <p className="text-xl sm:text-2xl text-white mb-8 max-w-3xl mx-auto">
+            Gentle and specific "nerve-first" approach to pediatric, prenatal, and family care.
+          </p>
+          <a
+            href="/new-patient-center"
+            className="inline-block bg-primary-dark text-white px-10 py-4 rounded-lg text-lg font-medium hover:bg-primary-accent transition shadow-xl"
+          >
+            New Patient Center
+          </a>
+        </div>
+      </section>
 
-          <div className="mb-16">
-            <div className="relative h-80 mb-8 rounded-xl overflow-hidden">
-              <img
-                src="https://cdn.durable.co/blocks/3bKnIpzL4kwKqH9yRZCJIfpZOU5u8XIQdFmsY1J1Wspti1bSjSms8jgjI39fdgJA.jpg"
-                alt="Cultivate Wellness Chiropractic"
-                className="w-full h-full object-cover object-center"
-                style={{ objectPosition: 'center 35%' }}
-              />
-            </div>
+      <section className="py-16 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">Embracing Your Family as Ours</h2>
+            <p className="text-lg text-gray-700 mb-6">
+              At Cultivate Wellness Chiropractic, we genuinely treat every patient as an extension of our own family.
+            </p>
 
-            <div className="max-w-4xl mx-auto">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">Embracing Your Family as Ours</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                At Cultivate Wellness Chiropractic, we genuinely treat every patient as an extension of our own family.
-              </p>
-
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6 mt-12">Nerve First: Our Unique Approach to Your Family's Health</h2>
-              <p className="text-lg text-gray-700 mb-6">
-                We don't guess, we test! Our neurologically-focused approach means we use advanced technology to assess your nervous system and create personalized care plans.
-              </p>
-            </div>
+            <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6 mt-12">Nerve First: Our Unique Approach to Your Family's Health</h2>
+            <p className="text-lg text-gray-700 mb-6">
+              We don't guess, we test! Our neurologically-focused approach means we use advanced technology to assess your nervous system and create personalized care plans.
+            </p>
           </div>
         </div>
       </section>
