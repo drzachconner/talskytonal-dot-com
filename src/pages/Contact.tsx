@@ -3,7 +3,6 @@ import { SITE } from '../data/site';
 import { useEffect } from 'react';
 import { breadcrumbJsonLd } from '../lib/breadcrumbs';
 import { MapPin, Phone, Mail, Clock } from 'lucide-react';
-import ContactForm from '../components/ContactForm';
 
 export default function Contact() {
   useSeo({
@@ -13,16 +12,24 @@ export default function Contact() {
   });
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(breadcrumbJsonLd([
+    const breadcrumbScript = document.createElement('script');
+    breadcrumbScript.type = 'application/ld+json';
+    breadcrumbScript.text = JSON.stringify(breadcrumbJsonLd([
       { name: 'Home', url: `https://${SITE.domain}/` },
       { name: 'Contact', url: `https://${SITE.domain}/contact-us` },
     ]));
-    document.head.appendChild(script);
+    document.head.appendChild(breadcrumbScript);
+
+    const jotformScript = document.createElement('script');
+    jotformScript.type = 'text/javascript';
+    jotformScript.src = 'https://form.jotform.com/jsform/232538433981058';
+    document.body.appendChild(jotformScript);
 
     return () => {
-      document.head.removeChild(script);
+      document.head.removeChild(breadcrumbScript);
+      if (jotformScript.parentNode) {
+        document.body.removeChild(jotformScript);
+      }
     };
   }, []);
 
@@ -132,7 +139,7 @@ export default function Contact() {
 
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
-              <ContactForm />
+              <div id="jotform-container" className="min-h-[600px]" />
             </div>
           </div>
         </div>
