@@ -39,12 +39,12 @@ export default function Header() {
               />
             </Link>
 
-            <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
+            <div className="hidden xl:flex items-center space-x-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
                   to={link.to}
-                  className={`text-sm font-medium transition ${
+                  className={`text-sm font-medium transition whitespace-nowrap ${
                     isActive(link.to)
                       ? 'text-primary-dark border-b-2 border-primary-dark'
                       : 'text-gray-900 hover:text-primary'
@@ -57,7 +57,7 @@ export default function Header() {
                 href={SITE.janeUrlWithUtm}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-primary-dark text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-accent transition"
+                className="bg-primary-dark text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-accent transition whitespace-nowrap"
               >
                 Book Appointment
               </a>
@@ -65,7 +65,7 @@ export default function Header() {
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="lg:hidden p-2 rounded-lg hover:bg-gray-100"
+              className="xl:hidden p-2 rounded-lg hover:bg-gray-100"
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
             >
@@ -74,7 +74,7 @@ export default function Header() {
           </div>
 
           {isMenuOpen && (
-            <div className="lg:hidden py-4 space-y-2">
+            <div className="xl:hidden py-4 space-y-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
