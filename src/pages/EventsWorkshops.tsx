@@ -14,16 +14,32 @@ export default function EventsWorkshops() {
   });
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(breadcrumbJsonLd([
+    const breadcrumbScript = document.createElement('script');
+    breadcrumbScript.type = 'application/ld+json';
+    breadcrumbScript.text = JSON.stringify(breadcrumbJsonLd([
       { name: 'Home', url: `https://${SITE.domain}/` },
       { name: 'Workshops For Parents', url: `https://${SITE.domain}/events-workshops` },
     ]));
-    document.head.appendChild(script);
+    document.head.appendChild(breadcrumbScript);
+
+    const jotformScriptPS = document.createElement('script');
+    jotformScriptPS.type = 'text/javascript';
+    jotformScriptPS.src = 'https://form.jotform.com/jsform/232584088204154';
+    document.body.appendChild(jotformScriptPS);
+
+    const jotformScriptNotify = document.createElement('script');
+    jotformScriptNotify.type = 'text/javascript';
+    jotformScriptNotify.src = 'https://form.jotform.com/jsform/232585320612147';
+    document.body.appendChild(jotformScriptNotify);
 
     return () => {
-      document.head.removeChild(script);
+      document.head.removeChild(breadcrumbScript);
+      if (jotformScriptPS.parentNode) {
+        document.body.removeChild(jotformScriptPS);
+      }
+      if (jotformScriptNotify.parentNode) {
+        document.body.removeChild(jotformScriptNotify);
+      }
     };
   }, []);
 
@@ -103,19 +119,14 @@ export default function EventsWorkshops() {
               </p>
             </div>
 
-            <div className="bg-white border-2 border-primary p-8 rounded-xl shadow-lg text-center">
-              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4">
+            <div className="bg-white border-2 border-primary p-8 rounded-xl shadow-lg">
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 text-center">
                 Be the First to Know
               </h2>
-              <p className="text-lg text-gray-700 mb-6">
+              <p className="text-lg text-gray-700 mb-6 text-center">
                 Sign up to be notified when our next workshop is scheduled.
               </p>
-              <Link
-                to="/contact-us"
-                className="inline-block bg-primary-dark text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-primary-accent transition"
-              >
-                Notify Me of Upcoming Workshops
-              </Link>
+              <div id="jotform-workshop-notify" className="min-h-[400px]" />
             </div>
           </div>
         </div>

@@ -12,16 +12,24 @@ export default function RequestAppointment() {
   });
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(breadcrumbJsonLd([
+    const breadcrumbScript = document.createElement('script');
+    breadcrumbScript.type = 'application/ld+json';
+    breadcrumbScript.text = JSON.stringify(breadcrumbJsonLd([
       { name: 'Home', url: `https://${SITE.domain}/` },
       { name: 'Request Appointment', url: `https://${SITE.domain}/request-an-appointment` },
     ]));
-    document.head.appendChild(script);
+    document.head.appendChild(breadcrumbScript);
+
+    const jotformScript = document.createElement('script');
+    jotformScript.type = 'text/javascript';
+    jotformScript.src = 'https://form.jotform.com/jsform/232578527282161';
+    document.body.appendChild(jotformScript);
 
     return () => {
-      document.head.removeChild(script);
+      document.head.removeChild(breadcrumbScript);
+      if (jotformScript.parentNode) {
+        document.body.removeChild(jotformScript);
+      }
     };
   }, []);
 
@@ -40,39 +48,13 @@ export default function RequestAppointment() {
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-            <div className="bg-gradient-to-br from-primary-light/10 to-primary-light/10 p-8 rounded-xl text-center">
-              <div className="bg-primary-dark w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Calendar size={32} className="text-white" />
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Book Online</h2>
-              <p className="text-gray-700 mb-6">
-                View available appointments and schedule instantly through our online booking system.
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-gradient-to-br from-primary-light/10 to-primary-light/10 p-8 rounded-xl mb-8">
+              <h2 className="text-2xl font-bold text-gray-900 mb-4 text-center">Schedule Your Appointment</h2>
+              <p className="text-gray-700 mb-6 text-center">
+                Fill out the form below or call us at <a href={`tel:${SITE.phone.replace(/[^+\d]/g, '')}`} className="text-primary-dark font-medium hover:underline">{SITE.phone}</a>
               </p>
-              <a
-                href={SITE.janeUrlWithUtm}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block bg-primary-dark text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-accent transition"
-              >
-                Book Now
-              </a>
-            </div>
-
-            <div className="bg-gradient-to-br from-primary-light/10 to-primary-light/10 p-8 rounded-xl text-center">
-              <div className="bg-primary-dark w-16 h-16 rounded-lg flex items-center justify-center mx-auto mb-4">
-                <Phone size={32} className="text-white" />
-              </div>
-              <h2 className="text-2xl font-bold text-gray-900 mb-4">Call Us</h2>
-              <p className="text-gray-700 mb-6">
-                Speak with our friendly staff to schedule your appointment or ask any questions.
-              </p>
-              <a
-                href={`tel:${SITE.phone.replace(/[^+\d]/g, '')}`}
-                className="inline-block bg-primary-dark text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-accent transition"
-              >
-                {SITE.phone}
-              </a>
+              <div id="jotform-container" className="min-h-[600px]" />
             </div>
           </div>
         </div>

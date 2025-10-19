@@ -15,6 +15,10 @@ import Contact from './pages/Contact';
 import Privacy from './pages/Privacy';
 import Thanks from './pages/Thanks';
 import NotFound from './pages/NotFound';
+import ThreeWaysToPoop from './pages/ThreeWaysToPoop';
+import ThreeStepsTransition from './pages/ThreeStepsTransition';
+import RHKNGuide from './pages/RHKNGuide';
+import ThreeWaysToSleep from './pages/ThreeWaysToSleep';
 
 function App() {
   return (
@@ -36,6 +40,10 @@ function App() {
             <Route path="/contact-us" element={<Contact />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/thanks" element={<Thanks />} />
+            <Route path="/3-ways-to-poop" element={<ThreeWaysToPoop />} />
+            <Route path="/3-steps-transition" element={<ThreeStepsTransition />} />
+            <Route path="/rhkn-guide" element={<RHKNGuide />} />
+            <Route path="/3-ways-to-sleep" element={<ThreeWaysToSleep />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

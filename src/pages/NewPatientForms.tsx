@@ -2,7 +2,6 @@ import { useSeo } from '../hooks/useSeo';
 import { SITE } from '../data/site';
 import { useEffect } from 'react';
 import { breadcrumbJsonLd } from '../lib/breadcrumbs';
-import { ExternalLink } from 'lucide-react';
 
 export default function NewPatientForms() {
   useSeo({
@@ -12,16 +11,24 @@ export default function NewPatientForms() {
   });
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(breadcrumbJsonLd([
+    const breadcrumbScript = document.createElement('script');
+    breadcrumbScript.type = 'application/ld+json';
+    breadcrumbScript.text = JSON.stringify(breadcrumbJsonLd([
       { name: 'Home', url: `https://${SITE.domain}/` },
       { name: 'New Patient Forms', url: `https://${SITE.domain}/new-patient-forms` },
     ]));
-    document.head.appendChild(script);
+    document.head.appendChild(breadcrumbScript);
+
+    const jotformScript = document.createElement('script');
+    jotformScript.type = 'text/javascript';
+    jotformScript.src = 'https://form.jotform.com/jsform/232587413942158';
+    document.body.appendChild(jotformScript);
 
     return () => {
-      document.head.removeChild(script);
+      document.head.removeChild(breadcrumbScript);
+      if (jotformScript.parentNode) {
+        document.body.removeChild(jotformScript);
+      }
     };
   }, []);
 
@@ -47,15 +54,7 @@ export default function NewPatientForms() {
               necessary information before your appointment. This allows us to spend more time
               focused on your care during your visit.
             </p>
-            <a
-              href={SITE.janeUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 bg-primary-dark text-white px-6 py-3 rounded-lg font-medium hover:bg-primary-accent transition"
-            >
-              Access Patient Portal
-              <ExternalLink size={20} />
-            </a>
+            <div id="jotform-container" className="min-h-[600px]" />
           </div>
 
           <div className="space-y-6">
