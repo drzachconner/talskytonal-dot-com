@@ -12,7 +12,14 @@ export default function ContactForm() {
     setError('');
 
     const formData = new FormData(e.currentTarget);
-    const data = Object.fromEntries(formData);
+    const rawData = Object.fromEntries(formData);
+
+    const data = {
+      name: rawData.name as string,
+      email: rawData.email as string,
+      phone: rawData.phone as string,
+      message: rawData.message as string,
+    };
 
     try {
       const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
@@ -20,6 +27,7 @@ export default function ContactForm() {
 
       console.log('Supabase URL:', supabaseUrl);
       console.log('Has Anon Key:', !!supabaseAnonKey);
+      console.log('Form data:', { ...data, message: data.message?.substring(0, 50) });
 
       if (!supabaseUrl || !supabaseAnonKey) {
         throw new Error('Supabase configuration missing');
@@ -38,11 +46,18 @@ export default function ContactForm() {
       });
 
       console.log('Response status:', response.status);
+      console.log('Response headers:', Object.fromEntries(response.headers.entries()));
+
+      if (!response.ok) {
+        const errorText = await response.text();
+        console.error('Response error text:', errorText);
+        throw new Error(`HTTP ${response.status}: ${errorText}`);
+      }
 
       const result = await response.json();
       console.log('Response result:', result);
 
-      if (result.ok || response.ok) {
+      if (result.ok) {
         setSuccess(true);
         e.currentTarget.reset();
         setTimeout(() => setSuccess(false), 5000);
