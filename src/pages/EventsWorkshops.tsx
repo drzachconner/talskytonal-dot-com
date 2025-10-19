@@ -103,7 +103,7 @@ export default function EventsWorkshops() {
               </p>
             </div>
 
-            <div className="bg-white border-2 border-primary p-8 rounded-xl shadow-lg">
+            <div>
               <h2 className="text-3xl font-heading font-bold text-gray-900 mb-4 text-center">
                 Be the First to Know
               </h2>

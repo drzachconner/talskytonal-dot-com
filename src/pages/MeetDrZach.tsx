@@ -31,13 +31,11 @@ export default function MeetDrZach() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <div className="w-64 h-64 mx-auto mb-8 rounded-3xl overflow-hidden shadow-2xl">
-              <img
-                src="/images/meet-dr-zach-hero.jpg"
-                alt="Dr. Zach Conner"
-                className="w-full h-full object-cover"
-              />
-            </div>
+            <img
+              src="/images/meet-dr-zach-hero.jpg"
+              alt="Dr. Zach Conner"
+              className="w-64 h-64 mx-auto mb-8 rounded-3xl shadow-2xl object-cover"
+            />
             <h1 className="text-4xl font-heading font-bold text-gray-900 mb-2">
               Welcome to Cultivate Wellness
             </h1>
