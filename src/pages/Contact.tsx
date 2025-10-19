@@ -20,16 +20,8 @@ export default function Contact() {
     ]));
     document.head.appendChild(breadcrumbScript);
 
-    const jotformScript = document.createElement('script');
-    jotformScript.type = 'text/javascript';
-    jotformScript.src = 'https://form.jotform.com/jsform/232538433981058';
-    document.body.appendChild(jotformScript);
-
     return () => {
       document.head.removeChild(breadcrumbScript);
-      if (jotformScript.parentNode) {
-        document.body.removeChild(jotformScript);
-      }
     };
   }, []);
 
@@ -139,7 +131,13 @@ export default function Contact() {
 
             <div>
               <h2 className="text-3xl font-bold text-gray-900 mb-8">Send Us a Message</h2>
-              <div id="jotform-container" className="min-h-[600px]" />
+              <iframe
+                src="https://form.jotform.com/232538433981058"
+                width="100%"
+                height="700"
+                style={{ border: 0 }}
+                title="Contact Form"
+              />
             </div>
           </div>
         </div>

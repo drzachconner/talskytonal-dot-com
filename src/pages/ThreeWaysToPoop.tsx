@@ -19,16 +19,8 @@ export default function ThreeWaysToPoop() {
     ]));
     document.head.appendChild(breadcrumbScript);
 
-    const jotformScript = document.createElement('script');
-    jotformScript.type = 'text/javascript';
-    jotformScript.src = 'https://form.jotform.com/jsform/232886042433153';
-    document.body.appendChild(jotformScript);
-
     return () => {
       document.head.removeChild(breadcrumbScript);
-      if (jotformScript.parentNode) {
-        document.body.removeChild(jotformScript);
-      }
     };
   }, []);
 
@@ -53,7 +45,13 @@ export default function ThreeWaysToPoop() {
               Discover three simple, effective strategies to support your child's digestive health naturally.
               Fill out the form below to receive your guide instantly.
             </p>
-            <div id="jotform-container" className="min-h-[600px]" />
+            <iframe
+              src="https://form.jotform.com/232886042433153"
+              width="100%"
+              height="700"
+              style={{ border: 0 }}
+              title="3 Ways to Poop Better Guide"
+            />
           </div>
         </div>
       </section>

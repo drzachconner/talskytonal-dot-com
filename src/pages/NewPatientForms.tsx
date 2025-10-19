@@ -19,16 +19,8 @@ export default function NewPatientForms() {
     ]));
     document.head.appendChild(breadcrumbScript);
 
-    const jotformScript = document.createElement('script');
-    jotformScript.type = 'text/javascript';
-    jotformScript.src = 'https://form.jotform.com/jsform/232587413942158';
-    document.body.appendChild(jotformScript);
-
     return () => {
       document.head.removeChild(breadcrumbScript);
-      if (jotformScript.parentNode) {
-        document.body.removeChild(jotformScript);
-      }
     };
   }, []);
 
@@ -54,7 +46,13 @@ export default function NewPatientForms() {
               necessary information before your appointment. This allows us to spend more time
               focused on your care during your visit.
             </p>
-            <div id="jotform-container" className="min-h-[600px]" />
+            <iframe
+              src="https://form.jotform.com/232587413942158"
+              width="100%"
+              height="700"
+              style={{ border: 0 }}
+              title="New Patient Forms"
+            />
           </div>
 
           <div className="space-y-6">
