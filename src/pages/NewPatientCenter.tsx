@@ -126,29 +126,11 @@ export default function NewPatientCenter() {
           <div className="max-w-3xl mx-auto space-y-6">
             <div className="bg-white p-6 rounded-xl">
               <h3 className="text-lg font-bold text-gray-900 mb-2">
-                What should I bring to my first appointment?
-              </h3>
-              <p className="text-gray-700">
-                Please bring your insurance card, ID, and any relevant medical records or imaging
-                results. If you've completed your new patient forms online, you're all set!
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-xl">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">
                 How long is the first visit?
               </h3>
               <p className="text-gray-700">
                 Your initial visit typically takes 45-60 minutes. This includes a comprehensive
                 consultation, examination, and your first adjustment if appropriate.
-              </p>
-            </div>
-            <div className="bg-white p-6 rounded-xl">
-              <h3 className="text-lg font-bold text-gray-900 mb-2">
-                Do you accept insurance?
-              </h3>
-              <p className="text-gray-700">
-                We accept most major insurance plans. Please contact our office to verify your
-                specific coverage. We also offer affordable cash-pay options.
               </p>
             </div>
             <div className="bg-white p-6 rounded-xl">
