@@ -17,7 +17,7 @@ export const SITE = {
   },
   janeUrl: 'https://cultivatewellnesschiro.janeapp.com/',
   janeUrlWithUtm: 'https://cultivatewellnesschiro.janeapp.com/?utm_source=website&utm_medium=cta&utm_campaign=request-appointment',
-  hours: ['Mo-Fr 09:00-17:00', 'Sa 10:00-13:00'],
+  hours: ['Friday 3:00 PM - 6:30 PM', 'Saturday 8:00 AM - 1:00 PM'],
   socials: {
     facebook: 'https://facebook.com/CultivateWellnessChiro',
     instagram: 'https://instagram.com/cultivatewellnesschiro',
