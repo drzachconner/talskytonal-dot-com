@@ -65,6 +65,12 @@ export default function AboutUs() {
               We take a "nerve first" approach through our specialized practice of Talsky Tonal Chiropractic. This unique and gentle yet powerful technique respects the intelligence of the body. It's particularly effective for children with special needs and has profound effects on people of all ages and backgrounds.
             </p>
             <p className="text-lg text-gray-700 mb-6">
+              Dr. Zach is one of only two certified U.S. instructors of Talsky Tonal, bringing advanced expertise in this neurologically-focused approach. This gentle technique integrates chiropractic principles with quantum physics and consciousness to restore nervous system function and promote proactive healing.{' '}
+              <a href="/talsky-tonal-chiropractic" className="text-primary-dark font-semibold hover:text-primary-accent underline">
+                Learn more about Talsky Tonal Chiropractic →
+              </a>
+            </p>
+            <p className="text-lg text-gray-700 mb-6">
               At Cultivate Wellness, we don't guess, we test! Our state-of-the-art and non-invasive INSiGHT scanning technology allows us to measure the function and performance of your nervous system accurately, ensuring we understand precisely what's happening in your body and how best to assist you.
             </p>
 
