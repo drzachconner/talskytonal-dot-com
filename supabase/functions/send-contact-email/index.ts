@@ -24,7 +24,8 @@ Deno.serve(async (req: Request) => {
   try {
     const formData: ContactFormData = await req.json();
 
-    // Validate required fields
+    console.log('Received form data:', { ...formData, message: formData.message?.substring(0, 50) });
+
     if (!formData.name || !formData.email || !formData.message) {
       return new Response(
         JSON.stringify({ ok: false, error: "Missing required fields" }),
@@ -35,7 +36,6 @@ Deno.serve(async (req: Request) => {
       );
     }
 
-    // Email validation
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(formData.email)) {
       return new Response(
@@ -47,18 +47,10 @@ Deno.serve(async (req: Request) => {
       );
     }
 
-    // Here you would typically integrate with an email service like:
-    // - Resend (resend.com)
-    // - SendGrid
-    // - AWS SES
-    // - Mailgun
-    // 
-    // For now, we'll store in Supabase and you can set up email forwarding
-    // or retrieve these from a dashboard
-
-    // Store the contact form submission in Supabase
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!;
     const supabaseKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!;
+
+    console.log('Storing to Supabase:', supabaseUrl);
 
     const response = await fetch(`${supabaseUrl}/rest/v1/contact_submissions`, {
       method: 'POST',
@@ -77,8 +69,12 @@ Deno.serve(async (req: Request) => {
       })
     });
 
+    console.log('Supabase response status:', response.status);
+
     if (!response.ok) {
-      throw new Error('Failed to store submission');
+      const errorText = await response.text();
+      console.error('Supabase error:', errorText);
+      throw new Error('Failed to store submission: ' + errorText);
     }
 
     return new Response(
@@ -96,7 +92,8 @@ Deno.serve(async (req: Request) => {
     return new Response(
       JSON.stringify({ 
         ok: false, 
-        error: "Failed to send message. Please try again or call us directly." 
+        error: "Failed to send message. Please try again or call us directly.",
+        details: error instanceof Error ? error.message : String(error)
       }),
       {
         status: 500,
