@@ -244,7 +244,7 @@ export default function Home() {
           <h2 className="text-3xl font-heading font-bold text-gray-900 mb-8 text-center">Office Hours</h2>
           <div className="flex justify-center">
             <img
-              src="/images/CWC New Hours.png"
+              src="/images/office-hours.png"
               alt="Office Hours Schedule"
               className="w-full max-w-2xl rounded-xl shadow-lg"
             />
