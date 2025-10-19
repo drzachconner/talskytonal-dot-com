@@ -56,6 +56,7 @@ export default function Home() {
         subtitle={`"Our primary focus is your family's health and happiness. We specialize in gentle, neuro-focused chiropractic care. Whether the journey involves autism, epilepsy, special needs, or well baby checks and family wellness, our team is more than prepared to cultivate the best healing experience possible." - Dr. Zach Conner, Rochester Hills, MI Chiropractor`}
         ctaText="Request an Appointment"
         ctaLink={SITE.janeUrlWithUtm}
+        backgroundImage="https://cdn.durable.co/covers/37KpAJ8KVYNfjI0BMc0oCSPXSu88DrANH0ncyjkgtjGTqbBujHTXPPVlYD8e2wWG.jpg"
       />
 
       <section className="py-12 bg-white">

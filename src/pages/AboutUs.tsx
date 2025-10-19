@@ -35,11 +35,12 @@ export default function AboutUs() {
           </h1>
 
           <div className="mb-16">
-            <div className="relative h-96 mb-8 rounded-xl overflow-hidden">
+            <div className="relative h-80 mb-8 rounded-xl overflow-hidden">
               <img
                 src="https://cdn.durable.co/blocks/3bKnIpzL4kwKqH9yRZCJIfpZOU5u8XIQdFmsY1J1Wspti1bSjSms8jgjI39fdgJA.jpg"
                 alt="Cultivate Wellness Chiropractic"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-center"
+                style={{ objectPosition: 'center 35%' }}
               />
             </div>
 

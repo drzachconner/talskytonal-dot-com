@@ -10,17 +10,24 @@ interface HeroProps {
 
 export default function Hero({ title, subtitle, ctaText, ctaLink, backgroundImage }: HeroProps) {
   return (
-    <section className="relative bg-white py-20 sm:py-28">
+    <section className={`relative py-20 sm:py-28 ${ backgroundImage ? 'min-h-[500px] flex items-center' : 'bg-white'}`}>
       {backgroundImage && (
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute inset-0 bg-gradient-to-br from-primary to-primary-light" />
-        </div>
+        <>
+          <div className="absolute inset-0 z-0">
+            <img
+              src={backgroundImage}
+              alt="Hero background"
+              className="w-full h-full object-cover"
+            />
+          </div>
+          <div className="absolute inset-0 z-0 bg-gradient-to-r from-primary-dark/70 to-primary/60" />
+        </>
       )}
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 className={`text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 ${ backgroundImage ? 'text-white' : 'text-gray-900'}`}>
           {title}
         </h1>
-        <p className="text-lg sm:text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+        <p className={`text-lg sm:text-xl mb-8 max-w-3xl mx-auto ${ backgroundImage ? 'text-white' : 'text-gray-700'}`}>
           {subtitle}
         </p>
         {ctaText && ctaLink && (

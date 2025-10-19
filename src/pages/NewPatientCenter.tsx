@@ -56,12 +56,20 @@ export default function NewPatientCenter() {
 
   return (
     <>
-      <section className="py-16 bg-gradient-to-br from-primary-light/10 to-primary-light/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center mb-6">
+      <section className="relative py-32 bg-gray-900 min-h-[400px] flex items-center">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://images.unsplash.com/photo-1593612605566-fc2e271cb68f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080"
+            alt="New Patient Center"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-primary-dark/70 to-primary/60" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white text-center mb-6">
             New Patient Center
           </h1>
-          <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto">
+          <p className="text-lg text-white text-center max-w-3xl mx-auto">
             Welcome to Cultivate Wellness Chiropractic! We're excited to partner with you on your
             wellness journey.
           </p>

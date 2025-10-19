@@ -28,12 +28,20 @@ export default function MeetDrZach() {
 
   return (
     <>
-      <section className="relative py-32 bg-gradient-to-br from-primary to-primary-dark text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4">
+      <section className="relative py-32 bg-gray-900 min-h-[400px] flex items-center">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="https://cdn.durable.co/blocks/3bKnIpzL4kwKqH9yRZCJIfpZOU5u8XIQdFmsY1J1Wspti1bSjSms8jgjI39fdgJA.jpg"
+            alt="Dr. Zach Conner"
+            className="w-full h-full object-cover"
+          />
+        </div>
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-primary-dark/70 to-primary/60" />
+        <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h1 className="text-4xl sm:text-5xl font-heading font-bold mb-4 text-white">
             Welcome to Cultivate Wellness
           </h1>
-          <p className="text-2xl font-heading">Dr. Zach Conner</p>
+          <p className="text-2xl font-heading text-white">Dr. Zach Conner</p>
         </div>
       </section>
 

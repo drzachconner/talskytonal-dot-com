@@ -8,7 +8,6 @@ export default function Header() {
   const location = useLocation();
 
   const navLinks = [
-    { to: '/', label: 'Home' },
     { to: '/about-us', label: 'About Us' },
     { to: '/meet-dr-zach', label: 'Meet Dr. Zach' },
     { to: '/new-patient-center', label: 'New Patients' },
@@ -39,7 +38,7 @@ export default function Header() {
               />
             </Link>
 
-            <div className="hidden md:flex items-center space-x-6">
+            <div className="hidden lg:flex items-center space-x-4 xl:space-x-6">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
@@ -65,7 +64,7 @@ export default function Header() {
 
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg hover:bg-gray-100"
+              className="lg:hidden p-2 rounded-lg hover:bg-gray-100"
               aria-label="Toggle menu"
               aria-expanded={isMenuOpen}
             >
@@ -74,7 +73,7 @@ export default function Header() {
           </div>
 
           {isMenuOpen && (
-            <div className="md:hidden py-4 space-y-2">
+            <div className="lg:hidden py-4 space-y-2">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
