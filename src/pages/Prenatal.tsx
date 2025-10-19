@@ -51,14 +51,20 @@ export default function Prenatal() {
 
   return (
     <>
-      <section className="py-16 bg-gradient-to-br from-primary-light/10 to-primary-light/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center mb-6">
-            Prenatal Chiropractic Care
+      <section className="relative py-32 bg-gray-900">
+        <div className="absolute inset-0">
+          <img
+            src="https://images.unsplash.com/photo-1568043625493-2b0633c7c491?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080"
+            alt="Prenatal Chiropractic Care"
+            className="w-full h-full object-cover opacity-40"
+          />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white text-center mb-6">
+            Prenatal
           </h1>
-          <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto">
-            Safe, gentle chiropractic care designed to support you and your baby throughout
-            pregnancy and beyond.
+          <p className="text-lg text-white text-center max-w-3xl mx-auto">
+            The cultivation of a thriving and healthy family starts during the perinatal period. Trained in the Webster Technique along with a gentle, neuro-focused approach, we provide premier care and support for moms from conception to postnatal care.
           </p>
         </div>
       </section>

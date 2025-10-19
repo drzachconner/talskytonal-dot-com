@@ -28,16 +28,33 @@ export default function AboutUs() {
 
   return (
     <>
-      <section className="py-16 bg-gradient-to-br from-primary-light/10 to-primary-light/10">
+      <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center mb-6">
+          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center mb-12">
             About Us
           </h1>
-          <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto">
-            At Cultivate Wellness Chiropractic, we believe in nurturing health naturally. Our mission
-            is to provide compassionate, evidence-based chiropractic care that empowers families to
-            live their healthiest lives.
-          </p>
+
+          <div className="mb-16">
+            <div className="relative h-96 mb-8 rounded-xl overflow-hidden">
+              <img
+                src="https://cdn.durable.co/blocks/3bKnIpzL4kwKqH9yRZCJIfpZOU5u8XIQdFmsY1J1Wspti1bSjSms8jgjI39fdgJA.jpg"
+                alt="Cultivate Wellness Chiropractic"
+                className="w-full h-full object-cover"
+              />
+            </div>
+
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6">Embracing Your Family as Ours</h2>
+              <p className="text-lg text-gray-700 mb-6">
+                At Cultivate Wellness Chiropractic, we genuinely treat every patient as an extension of our own family.
+              </p>
+
+              <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6 mt-12">Nerve First: Our Unique Approach to Your Family's Health</h2>
+              <p className="text-lg text-gray-700 mb-6">
+                We don't guess, we test! Our neurologically-focused approach means we use advanced technology to assess your nervous system and create personalized care plans.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -57,38 +74,17 @@ export default function AboutUs() {
         </div>
       </section>
 
-      <section className="py-16 bg-gray-50">
+      <section className="py-16 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">Our Philosophy</h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center">
-              <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-primary-dark">1</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Patient-Centered Care</h3>
-              <p className="text-gray-700">
-                Every treatment plan is tailored to your unique needs and goals.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-primary-dark">2</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Evidence-Based</h3>
-              <p className="text-gray-700">
-                We use proven techniques supported by the latest research.
-              </p>
-            </div>
-            <div className="text-center">
-              <div className="bg-emerald-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
-                <span className="text-2xl font-bold text-primary-dark">3</span>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Whole Family Wellness</h3>
-              <p className="text-gray-700">
-                From newborns to grandparents, we care for every stage of life.
-              </p>
-            </div>
-          </div>
+          <h2 className="text-3xl font-heading font-bold mb-8">MISSION:</h2>
+          <p className="text-xl mb-12 max-w-4xl">
+            Our team is dedicated to optimizing the body's natural power to heal, function, and perform through gentle, neurologically-focused care, improving the well-being of children, their families, and the broader community.
+          </p>
+
+          <h2 className="text-3xl font-heading font-bold mb-8">VISION:</h2>
+          <p className="text-xl max-w-4xl">
+            We are cultivating a future where children, especially those with special needs, and their families find the strength, support, and transformative care they need to overcome challenges and reach their fullest potential.
+          </p>
         </div>
       </section>
 

@@ -51,14 +51,20 @@ export default function Pediatric() {
 
   return (
     <>
-      <section className="py-16 bg-gradient-to-br from-primary-light/10 to-primary-light/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center mb-6">
-            Pediatric Chiropractic Care
+      <section className="relative py-32 bg-gray-900">
+        <div className="absolute inset-0">
+          <img
+            src="https://cdn.durable.co/blocks/czT50DIPfXoSOm0RccUMjglrHK1aNV6r5reUPlUHfiFAFxiORylUWju8rpRe4rhx.jpg"
+            alt="Pediatric Chiropractic Care"
+            className="w-full h-full object-cover opacity-40"
+          />
+        </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h1 className="text-4xl sm:text-5xl font-bold text-white text-center mb-6">
+            Pediatric
           </h1>
-          <p className="text-lg text-gray-700 text-center max-w-3xl mx-auto">
-            Gentle, specialized chiropractic care for infants and children to support healthy growth
-            and development at every stage.
+          <p className="text-lg text-white text-center max-w-3xl mx-auto">
+            What truly distinguishes Cultivate Wellness is our specialty and expertise in pediatric care. We can achieve remarkable outcomes across a range of conditions, from soothing fussy and colicky babies to aiding chronically ill children, and supporting kids and teens facing sensory and spectrum challenges.
           </p>
         </div>
       </section>

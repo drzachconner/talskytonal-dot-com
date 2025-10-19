@@ -26,16 +26,24 @@ export default function ServicesGrid() {
               <Link
                 key={service.id}
                 to={service.slug}
-                className="bg-white border border-gray-200 p-8 rounded-xl hover:shadow-lg transition group"
+                className="bg-white rounded-xl hover:shadow-lg transition group overflow-hidden flex flex-col"
               >
-                <div className="bg-primary-dark w-16 h-16 rounded-lg flex items-center justify-center mb-4 group-hover:bg-primary-accent transition">
-                  <Icon size={32} className="text-white" />
+                {'image' in service && (
+                  <div className="aspect-w-16 aspect-h-9 overflow-hidden">
+                    <img
+                      src={service.image}
+                      alt={service.title}
+                      className="w-full h-48 object-cover"
+                    />
+                  </div>
+                )}
+                <div className="p-6">
+                  <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
+                  <p className="text-gray-600 mb-4 text-left">{service.description}</p>
+                  <span className="inline-flex items-center gap-2 text-primary-dark font-medium group-hover:gap-3 transition-all">
+                    {service.title} <ArrowRight size={16} />
+                  </span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">{service.title}</h3>
-                <p className="text-gray-600 mb-4">{service.description}</p>
-                <span className="inline-flex items-center gap-2 text-primary-dark font-medium group-hover:gap-3 transition-all">
-                  Learn More <ArrowRight size={16} />
-                </span>
               </Link>
             );
           })}
