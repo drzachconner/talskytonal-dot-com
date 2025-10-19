@@ -54,7 +54,7 @@ export default function Home() {
       <section className="relative py-20 bg-gray-800">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://cdn.durable.co/blocks/3bKnIpzL4kwKqH9yRZCJIfpZOU5u8XIQdFmsY1J1Wspti1bSjSms8jgjI39fdgJA.jpg"
+            src="https://cdn.durable.co/blocks/1a4RLvjsHvDuZKVCIbjEIiB3izNbu4cVYkP8qionEumB5txV9BNVrodGsNZhXuoM.jpg"
             alt="Child receiving chiropractic care"
             className="w-full h-full object-cover opacity-60"
           />
@@ -92,7 +92,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative py-20 min-h-[400px] flex items-center justify-center" style={{ backgroundImage: 'url(https://cdn.durable.co/blocks/371f4hzULjYKvNJXPbd9LKAf08UY16iAU2rWZqVtvEyzDOX4wT9r5SBoDWDEGw88.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#5a7a99' }}>
+      <section className="relative py-20 min-h-[400px] flex items-center justify-center" style={{ backgroundImage: 'url(https://durable.sfo3.cdn.digitaloceanspaces.com/logos/1brtRj3dCKQ5bYIfXw3ldH6CN4t5jXQ9lSTcuDIUXjwTK1Uzs9Vdl2e0HNwd6lj2.png)', backgroundSize: 'cover', backgroundPosition: 'center', backgroundColor: '#5a7a99' }}>
         <div className="absolute inset-0 z-0" style={{ backgroundColor: 'rgba(90, 122, 153, 0.85)' }} />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <p className="text-xl sm:text-2xl text-white mb-8 max-w-4xl mx-auto leading-relaxed">
