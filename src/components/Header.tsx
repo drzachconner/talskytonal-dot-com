@@ -10,6 +10,7 @@ export default function Header() {
   const navLinks = [
     { to: '/', label: 'Home' },
     { to: '/about-us', label: 'About Us' },
+    { to: '/meet-dr-zach', label: 'Meet Dr. Zach' },
     { to: '/new-patient-center', label: 'New Patients' },
     { to: '/pediatric', label: 'Pediatric' },
     { to: '/prenatal', label: 'Prenatal' },

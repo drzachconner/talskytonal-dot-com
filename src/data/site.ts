@@ -19,8 +19,10 @@ export const SITE = {
   janeUrlWithUtm: 'https://cultivatewellnesschiro.janeapp.com/?utm_source=website&utm_medium=cta&utm_campaign=request-appointment',
   hours: ['Mo-Fr 09:00-17:00', 'Sa 10:00-13:00'],
   socials: {
-    instagram: 'https://instagram.com/cultivatewellnesschiro',
     facebook: 'https://facebook.com/CultivateWellnessChiro',
+    instagram: 'https://instagram.com/cultivatewellnesschiro',
+    tiktok: 'https://tiktok.com/@cultivatewellnesschiro',
+    youtube: 'https://youtube.com/@cultivatewellnesschiropractic',
   },
   description: 'Experts in Drug-Free Pediatric, Prenatal, and Family Health Care! Gentle, neuro-focused chiropractic care.',
   priceRange: '$$',
