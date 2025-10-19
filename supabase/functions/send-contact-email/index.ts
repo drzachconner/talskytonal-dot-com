@@ -1,4 +1,5 @@
 import "jsr:@supabase/functions-js/edge-runtime.d.ts";
+import { Resend } from "npm:resend@4.0.0";
 
 const corsHeaders = {
   "Access-Control-Allow-Origin": "*",
@@ -77,10 +78,38 @@ Deno.serve(async (req: Request) => {
       throw new Error('Failed to store submission: ' + errorText);
     }
 
+    const resendApiKey = Deno.env.get('RESEND_API_KEY');
+
+    if (resendApiKey) {
+      try {
+        const resend = new Resend(resendApiKey);
+
+        await resend.emails.send({
+          from: 'Contact Form <onboarding@resend.dev>',
+          to: 'info@cultivatewellnesschiro.com',
+          subject: `New Contact Form Submission from ${formData.name}`,
+          html: `
+            <h2>New Contact Form Submission</h2>
+            <p><strong>Name:</strong> ${formData.name}</p>
+            <p><strong>Email:</strong> ${formData.email}</p>
+            ${formData.phone ? `<p><strong>Phone:</strong> ${formData.phone}</p>` : ''}
+            <p><strong>Message:</strong></p>
+            <p>${formData.message.replace(/\n/g, '<br>')}</p>
+          `,
+        });
+
+        console.log('Email sent successfully');
+      } catch (emailError) {
+        console.error('Failed to send email:', emailError);
+      }
+    } else {
+      console.warn('RESEND_API_KEY not configured - email not sent');
+    }
+
     return new Response(
-      JSON.stringify({ 
-        ok: true, 
-        message: "Message received! We'll reply within 24 hours." 
+      JSON.stringify({
+        ok: true,
+        message: "Message received! We'll reply within 24 hours."
       }),
       {
         status: 200,
@@ -90,8 +119,8 @@ Deno.serve(async (req: Request) => {
   } catch (error) {
     console.error('Error processing contact form:', error);
     return new Response(
-      JSON.stringify({ 
-        ok: false, 
+      JSON.stringify({
+        ok: false,
         error: "Failed to send message. Please try again or call us directly.",
         details: error instanceof Error ? error.message : String(error)
       }),

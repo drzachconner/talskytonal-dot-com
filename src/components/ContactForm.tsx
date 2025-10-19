@@ -70,6 +70,7 @@ export default function ContactForm() {
 
       if (result.ok || response.status === 200) {
         console.log('SUCCESS! Showing success message');
+        setError('');
         setSuccess(true);
         e.currentTarget.reset();
         setTimeout(() => setSuccess(false), 5000);
