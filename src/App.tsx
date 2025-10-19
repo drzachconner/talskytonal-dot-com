@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import MergerPopup from './components/MergerPopup';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import MeetDrZach from './pages/MeetDrZach';
@@ -36,6 +37,7 @@ function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <MergerPopup />
       <div className="min-h-screen flex flex-col">
         <Header />
         <main id="main" className="flex-grow">
