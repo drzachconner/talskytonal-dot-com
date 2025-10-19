@@ -30,25 +30,25 @@ export default function FreeGuidesForParents() {
     {
       title: 'Raising Healthy Kids Naturally',
       description: 'Discover natural approaches to support your child\'s overall health and wellness.',
-      image: 'https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=800&h=600&fit=crop',
+      image: '/images/image.png',
       link: '/rhkn-guide',
     },
     {
       title: '3 Ways to Improve Your Child\'s Sleep',
       description: 'Simple, effective strategies to help your child sleep better naturally.',
-      image: 'https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&h=600&fit=crop',
+      image: 'https://images.pexels.com/photos/6899388/pexels-photo-6899388.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       link: '/3-ways-to-sleep',
     },
     {
       title: '3 Ways to Get Your Child Pooping',
       description: 'Natural solutions to support your child\'s digestive health and regularity.',
-      image: 'https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&h=600&fit=crop',
+      image: 'https://images.pexels.com/photos/8613089/pexels-photo-8613089.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       link: '/3-ways-to-poop',
     },
     {
       title: '3 Steps to Smoothing Transitions for Sensory Kids',
       description: 'Essential strategies to help your child navigate major life changes with ease.',
-      image: 'https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=800&h=600&fit=crop',
+      image: 'https://images.pexels.com/photos/8613317/pexels-photo-8613317.jpeg?auto=compress&cs=tinysrgb&w=800&h=600&fit=crop',
       link: '/3-steps-transition',
     },
   ];
