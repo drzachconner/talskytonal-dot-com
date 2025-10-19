@@ -14,6 +14,7 @@ export default function Header() {
     { to: '/pediatric', label: 'Pediatric' },
     { to: '/prenatal', label: 'Prenatal' },
     { to: '/family', label: 'Family' },
+    { to: '/free-guides-for-parents', label: 'Free Guides' },
     { to: '/contact-us', label: 'Contact' },
   ];
 

@@ -97,6 +97,99 @@ export default function Home() {
 
       <ServicesGrid />
 
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-900 mb-4">Free Guides for Parents</h2>
+            <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+              Download our expert resources to help your child thrive naturally
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+            <Link
+              to="/rhkn-guide"
+              className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+            >
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1476703993599-0035a21b17a9?w=800&h=600&fit=crop"
+                  alt="Raising Healthy Kids Naturally"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-dark transition-colors">
+                  Raising Healthy Kids Naturally
+                </h3>
+                <span className="text-primary-dark font-medium text-sm">Download Free →</span>
+              </div>
+            </Link>
+            <Link
+              to="/3-ways-to-sleep"
+              className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+            >
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1540574163026-643ea20ade25?w=800&h=600&fit=crop"
+                  alt="3 Ways to Improve Your Child's Sleep"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-dark transition-colors">
+                  3 Ways to Improve Your Child's Sleep
+                </h3>
+                <span className="text-primary-dark font-medium text-sm">Download Free →</span>
+              </div>
+            </Link>
+            <Link
+              to="/3-ways-to-poop"
+              className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+            >
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?w=800&h=600&fit=crop"
+                  alt="3 Ways to Get Your Child Pooping"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-dark transition-colors">
+                  3 Ways to Get Your Child Pooping
+                </h3>
+                <span className="text-primary-dark font-medium text-sm">Download Free →</span>
+              </div>
+            </Link>
+            <Link
+              to="/3-steps-transition"
+              className="group bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition-shadow"
+            >
+              <div className="aspect-video overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1503919545889-aef636e10ad4?w=800&h=600&fit=crop"
+                  alt="3 Steps to Smoothing Transitions for Sensory Kids"
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-4">
+                <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-dark transition-colors">
+                  3 Steps to Smoothing Transitions
+                </h3>
+                <span className="text-primary-dark font-medium text-sm">Download Free →</span>
+              </div>
+            </Link>
+          </div>
+          <div className="text-center">
+            <Link
+              to="/free-guides-for-parents"
+              className="inline-block bg-primary-dark text-white px-8 py-4 rounded-lg text-lg font-medium hover:bg-primary-accent transition shadow-lg"
+            >
+              View All Free Guides
+            </Link>
+          </div>
+        </div>
+      </section>
+
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12 items-center">

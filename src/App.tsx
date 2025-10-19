@@ -20,6 +20,7 @@ import ThreeWaysToPoop from './pages/ThreeWaysToPoop';
 import ThreeStepsTransition from './pages/ThreeStepsTransition';
 import RHKNGuide from './pages/RHKNGuide';
 import ThreeWaysToSleep from './pages/ThreeWaysToSleep';
+import FreeGuidesForParents from './pages/FreeGuidesForParents';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -56,6 +57,7 @@ function App() {
             <Route path="/3-steps-transition" element={<ThreeStepsTransition />} />
             <Route path="/rhkn-guide" element={<RHKNGuide />} />
             <Route path="/3-ways-to-sleep" element={<ThreeWaysToSleep />} />
+            <Route path="/free-guides-for-parents" element={<FreeGuidesForParents />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
