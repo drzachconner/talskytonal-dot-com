@@ -32,7 +32,7 @@ export default function MeetDrZach() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
             <img
-              src="/images/meet-dr-zach-clinic.webp"
+              src="/images/dr-zach-adjusting.webp"
               alt="Dr. Zach Conner"
               className="w-64 h-64 mx-auto mb-8 rounded-3xl object-cover"
               style={{ boxShadow: '0 25px 50px -12px rgba(0, 0, 0, 0.25)' }}
