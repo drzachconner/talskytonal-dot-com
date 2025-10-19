@@ -167,7 +167,7 @@ export default function NewPatientCenter() {
       <section className="py-16 bg-primary-dark">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-3xl font-bold text-white mb-4">Ready to Get Started?</h2>
-          <p className="text-lg text-primary-light/10 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-white mb-8 max-w-2xl mx-auto">
             Take the first step toward better health. Schedule your appointment today.
           </p>
           <a

@@ -15,8 +15,23 @@ export default function ContactForm() {
     const data = Object.fromEntries(formData);
 
     try {
-      const { handleContactSubmission } = await import('../lib/mock-contact-api');
-      const result = await handleContactSubmission(data);
+      const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+      const supabaseAnonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
+
+      if (!supabaseUrl || !supabaseAnonKey) {
+        throw new Error('Supabase configuration missing');
+      }
+
+      const response = await fetch(`${supabaseUrl}/functions/v1/send-contact-email`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Authorization': `Bearer ${supabaseAnonKey}`,
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await response.json();
 
       if (result.ok) {
         setSuccess(true);
@@ -26,6 +41,7 @@ export default function ContactForm() {
         setError(result.error || 'Something went wrong. Please try again.');
       }
     } catch (err) {
+      console.error('Contact form error:', err);
       setError('Failed to send. Please check your connection.');
     } finally {
       setLoading(false);

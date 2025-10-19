@@ -142,11 +142,11 @@ export default function Contact() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto rounded-xl overflow-hidden shadow-lg">
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2939.8361896442847!2d-83.16216!3d42.682030099999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824e9a27e8c8e8b%3A0x8d8c8d8c8d8c8d8c!2s1460%20Walton%20Blvd%20%23210%2C%20Rochester%20Hills%2C%20MI%2048309!5e0!3m2!1sen!2sus!4v1234567890123!5m2!1sen!2sus"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2946.8361896442847!2d-83.16216232404588!3d42.68203007116649!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8824e81a6e0b0b0b%3A0x1234567890abcdef!2s1460%20Walton%20Blvd%20Suite%20210%2C%20Rochester%20Hills%2C%20MI%2048309!5e0!3m2!1sen!2sus!4v1635000000000!5m2!1sen!2sus"
               width="100%"
               height="450"
               style={{ border: 0 }}
-              allowFullScreen
+              allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
               title="Cultivate Wellness Chiropractic Location"
