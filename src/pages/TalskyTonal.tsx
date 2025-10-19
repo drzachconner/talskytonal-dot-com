@@ -44,8 +44,8 @@ export default function TalskyTonal() {
     },
     {
       icon: Sparkles,
-      title: 'Holistic Integration',
-      description: 'Integrates chiropractic principles with quantum physics and consciousness, focusing on the body\'s inherent intelligence for comprehensive wellness.',
+      title: 'Bio-Feedback Approach',
+      description: 'Utilizes gentle bio-feedback responses through balancing to identify exactly where the body is holding unnecessary tension, allowing precise and targeted care.',
     },
     {
       icon: Activity,
@@ -92,10 +92,10 @@ export default function TalskyTonal() {
               before developing this unique tonal method.
             </p>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              This technique represents a paradigm shift in chiropractic care, integrating chiropractic
-              principles with quantum physics and consciousness. Rather than simply addressing symptoms,
-              Talsky Tonal Chiropractic focuses on restoring the integrity and function of your nervous
-              system, allowing your body to heal and perform at its optimal level.
+              This technique represents a paradigm shift in chiropractic care. Rather than simply addressing
+              symptoms, Talsky Tonal Chiropractic focuses on finding and releasing accumulated stress patterns
+              in the body, restoring the integrity and function of your nervous system so your body can heal
+              and perform at its optimal level.
             </p>
             <div className="bg-emerald-50 border-l-4 border-emerald-700 p-6 rounded-lg my-8">
               <p className="text-xl text-gray-900 italic font-medium">
@@ -129,16 +129,30 @@ export default function TalskyTonal() {
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl font-bold text-gray-900 mb-6">How Does It Work?</h2>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6">Understanding "Stress Stuck On"</h2>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Talsky Tonal Chiropractic engages the nervous system more directly than traditional
-              chiropractic techniques. Instead of forceful manipulations, this approach uses gentle,
-              intuitive adjustments that respect your body's inherent intelligence.
+              When your body becomes overwhelmed with stress, it increases tension proportionate to that
+              stress and holds that tension pattern until it receives information letting it know that it's
+              safe to release. We refer to this as "stress stuck on" or in chiropractic terms, "subluxation."
             </p>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              The technique identifies your body's "stuck patterns" and facilitates a shift that allows
-              your nervous system to function optimally. This creates an environment where healing occurs
-              naturally, from the inside out.
+              These tension patterns accumulate in layers upon layers, filling what we call the "stress bucket."
+              Your body can only hold so much stress before symptoms start to occur and the brain's ability to
+              properly communicate with the rest of the body becomes interfered with by these layers of
+              unnecessary held tension.
+            </p>
+            <h2 className="text-3xl font-bold text-gray-900 mb-6 mt-8">How Talsky Tonal Chiropractic Works</h2>
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              Talsky Tonal Chiropractic utilizes gentle bio-feedback responses through balancing to identify
+              exactly where your body is holding onto tension that it no longer needs. Instead of forceful
+              manipulations, this approach uses gentle, intuitive adjustments that respect your body's
+              inherent intelligence.
+            </p>
+            <p className="text-lg text-gray-700 mb-6 leading-relaxed">
+              TTC finds this "stress stuck on" and gives your body the space, permission, and information it
+              needs to release these layers of stress held in the body. Your body then learns how to better
+              and better adjust itself. This technique is empowering to the body rather than forcing it,
+              leading to the potential of never-ending optimization with continued wellness care.
             </p>
             <div className="bg-gray-50 rounded-xl p-8 my-8">
               <h3 className="text-2xl font-bold text-gray-900 mb-4">Not a Replacement, But an Enhancement</h3>
