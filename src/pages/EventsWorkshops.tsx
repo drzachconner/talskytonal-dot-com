@@ -22,23 +22,15 @@ export default function EventsWorkshops() {
     ]));
     document.head.appendChild(breadcrumbScript);
 
-    const jotformScriptPS = document.createElement('script');
-    jotformScriptPS.type = 'text/javascript';
-    jotformScriptPS.src = 'https://form.jotform.com/jsform/232584088204154';
-    document.body.appendChild(jotformScriptPS);
-
-    const jotformScriptNotify = document.createElement('script');
-    jotformScriptNotify.type = 'text/javascript';
-    jotformScriptNotify.src = 'https://form.jotform.com/jsform/232585320612147';
-    document.body.appendChild(jotformScriptNotify);
+    const jotformScript = document.createElement('script');
+    jotformScript.type = 'text/javascript';
+    jotformScript.src = 'https://form.jotform.com/jsform/232585320612147';
+    document.body.appendChild(jotformScript);
 
     return () => {
       document.head.removeChild(breadcrumbScript);
-      if (jotformScriptPS.parentNode) {
-        document.body.removeChild(jotformScriptPS);
-      }
-      if (jotformScriptNotify.parentNode) {
-        document.body.removeChild(jotformScriptNotify);
+      if (jotformScript.parentNode) {
+        document.body.removeChild(jotformScript);
       }
     };
   }, []);
@@ -126,7 +118,7 @@ export default function EventsWorkshops() {
               <p className="text-lg text-gray-700 mb-6 text-center">
                 Sign up to be notified when our next workshop is scheduled.
               </p>
-              <div id="jotform-workshop-notify" className="min-h-[400px]" />
+              <div id="jotform-container" className="min-h-[400px]" />
             </div>
           </div>
         </div>
