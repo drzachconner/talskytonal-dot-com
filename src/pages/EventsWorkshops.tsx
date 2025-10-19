@@ -110,7 +110,7 @@ export default function EventsWorkshops() {
               <p className="text-lg text-gray-700 mb-6 text-center">
                 Sign up to be notified when our next workshop is scheduled.
               </p>
-              <div className="bg-white rounded-lg overflow-hidden p-6">
+              <div className="bg-white rounded-lg p-8">
                 <iframe
                   src="https://form.jotform.com/232585320612147"
                   width="100%"

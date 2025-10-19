@@ -45,7 +45,7 @@ export default function ThreeWaysToPoop() {
               Discover three simple, effective strategies to support your child's digestive health naturally.
               Fill out the form below to receive your guide instantly.
             </p>
-            <div className="bg-white rounded-xl shadow-sm overflow-hidden p-8">
+            <div className="bg-white rounded-xl shadow-sm p-12">
               <iframe
                 src="https://form.jotform.com/232886042433153"
                 width="100%"
