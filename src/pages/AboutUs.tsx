@@ -86,15 +86,26 @@ export default function AboutUs() {
 
       <section className="py-16 bg-primary text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-heading font-bold mb-8">MISSION:</h2>
-          <p className="text-xl mb-12 max-w-4xl">
-            Our team is dedicated to optimizing the body's natural power to heal, function, and perform through gentle, neurologically-focused care, improving the well-being of children, their families, and the broader community.
-          </p>
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <h2 className="text-3xl font-heading font-bold mb-8">MISSION:</h2>
+              <p className="text-xl mb-12">
+                Our team is dedicated to optimizing the body's natural power to heal, function, and perform through gentle, neurologically-focused care, improving the well-being of children, their families, and the broader community.
+              </p>
 
-          <h2 className="text-3xl font-heading font-bold mb-8">VISION:</h2>
-          <p className="text-xl max-w-4xl">
-            We are cultivating a future where children, especially those with special needs, and their families find the strength, support, and transformative care they need to overcome challenges and reach their fullest potential.
-          </p>
+              <h2 className="text-3xl font-heading font-bold mb-8">VISION:</h2>
+              <p className="text-xl">
+                We are cultivating a future where children, especially those with special needs, and their families find the strength, support, and transformative care they need to overcome challenges and reach their fullest potential.
+              </p>
+            </div>
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1475503572774-15a45e5d60b9?w=800&h=600&fit=crop"
+                alt="Family with children by the lake"
+                className="rounded-xl shadow-lg w-full"
+              />
+            </div>
+          </div>
         </div>
       </section>
 
