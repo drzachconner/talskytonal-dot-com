@@ -45,7 +45,7 @@ export default function ThreeStepsTransition() {
               Learn three essential steps to support your child through major life transitions.
               Fill out the form below to receive your guide instantly.
             </p>
-            <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden p-8">
               <iframe
                 src="https://form.jotform.com/232885887287176"
                 width="100%"

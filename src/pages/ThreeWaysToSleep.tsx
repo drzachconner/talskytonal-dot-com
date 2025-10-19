@@ -45,7 +45,7 @@ export default function ThreeWaysToSleep() {
               Discover three simple, effective strategies to help your child sleep better naturally.
               Fill out the form below to receive your guide instantly.
             </p>
-            <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden p-8">
               <iframe
                 src="https://form.jotform.com/232885167474165"
                 width="100%"

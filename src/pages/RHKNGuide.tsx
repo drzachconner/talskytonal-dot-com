@@ -44,7 +44,7 @@ export default function RHKNGuide() {
             <p className="text-gray-700 mb-6">
               Fill out the form below to receive your guide instantly.
             </p>
-            <div className="bg-white rounded-xl shadow-sm overflow-hidden">
+            <div className="bg-white rounded-xl shadow-sm overflow-hidden p-8">
               <iframe
                 src="https://form.jotform.com/232755576450159"
                 width="100%"
