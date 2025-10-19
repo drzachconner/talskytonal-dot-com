@@ -26,8 +26,9 @@ export default function ThreeWaysToPoop() {
 
   return (
     <>
-      <section className="py-16 bg-gradient-to-br from-primary-light/10 to-primary-light/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative py-24 bg-cover bg-center" style={{ backgroundImage: 'url(/images/pooping-guide.webp)' }}>
+        <div className="absolute inset-0 bg-white/80"></div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-gray-900 text-center mb-6">
             3 Ways to Poop Better
           </h1>
