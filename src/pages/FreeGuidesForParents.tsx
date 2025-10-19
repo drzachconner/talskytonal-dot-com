@@ -58,12 +58,12 @@ export default function FreeGuidesForParents() {
       <section className="relative py-32 bg-gray-900 min-h-[400px] flex items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&w=1080"
+            src="/images/Screenshot 2025-10-19 at 5.11.05 PM.png"
             alt="Free Guides for Parents"
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-primary-dark/70 to-primary/60" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-primary-dark/50 to-primary/40" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-white text-center mb-6">
             Free Guides for Parents
