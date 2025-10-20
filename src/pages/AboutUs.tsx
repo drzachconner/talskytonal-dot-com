@@ -119,6 +119,37 @@ export default function AboutUs() {
         </div>
       </section>
 
+      <section className="py-12 bg-gray-50">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <a
+              href="https://pxdocs.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/images/px-docs-logo.svg"
+                alt="PX Docs"
+                className="w-full h-auto"
+              />
+            </a>
+            <a
+              href="https://talskydocs.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="block hover:opacity-80 transition-opacity"
+            >
+              <img
+                src="/images/talsky-docs-logo.svg"
+                alt="Talsky Docs"
+                className="w-full h-auto"
+              />
+            </a>
+          </div>
+        </div>
+      </section>
+
       <CTABanner
         title="Meet Our Team in Person"
         description="Schedule a consultation and experience the Cultivate Wellness difference."
