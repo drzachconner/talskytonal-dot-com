@@ -30,12 +30,12 @@ export default function ScheduleAppointment() {
       <section className="relative py-32 bg-gray-900 min-h-[400px] flex items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="/images/office-hours.webp"
+            src="/images/schedule-hero.webp"
             alt="Schedule Appointment"
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-blue-900/80 to-primary-dark/70" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-emerald-900/70 to-primary-dark/70" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl sm:text-5xl font-bold text-white text-center mb-6">
             Schedule an Appointment

@@ -1,0 +1,15 @@
+<svg width="400" height="260" viewBox="0 0 400 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect x="1.5" y="1.5" width="397" height="257" stroke="#2C5282" stroke-width="3" fill="white"/>
+
+  <!-- Bars -->
+  <rect x="30" y="40" width="50" height="8" fill="#A0AEC0"/>
+  <rect x="30" y="58" width="70" height="12" fill="#A0AEC0"/>
+  <rect x="30" y="80" width="90" height="16" fill="#A0AEC0"/>
+  <rect x="30" y="106" width="110" height="35" fill="#2C5282"/>
+
+  <!-- PX Text -->
+  <text x="150" y="110" font-family="Arial, sans-serif" font-size="85" font-weight="bold" fill="#2C5282">PX</text>
+
+  <!-- DOCS Text -->
+  <text x="150" y="190" font-family="Arial, sans-serif" font-size="60" font-weight="normal" fill="#2C5282">DOCS</text>
+</svg>
