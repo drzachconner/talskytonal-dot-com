@@ -257,7 +257,7 @@ export default function Home() {
         title="Ready to Start Your Wellness Journey?"
         description="Schedule your first appointment and discover how chiropractic care can transform your family's health."
         buttonText="Book Your Appointment"
-        buttonLink={SITE.janeUrlWithUtm}
+        buttonLink="/schedule-appointment"
       />
     </>
   );

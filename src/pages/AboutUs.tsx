@@ -123,7 +123,7 @@ export default function AboutUs() {
         title="Meet Our Team in Person"
         description="Schedule a consultation and experience the Cultivate Wellness difference."
         buttonText="Book Your Visit"
-        buttonLink={SITE.janeUrlWithUtm}
+        buttonLink="/schedule-appointment"
       />
     </>
   );

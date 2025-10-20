@@ -152,7 +152,7 @@ export default function Family() {
         title="Bring Your Whole Family"
         description="Experience personalized care in a welcoming, family-friendly environment."
         buttonText="Schedule Family Appointment"
-        buttonLink={SITE.janeUrlWithUtm}
+        buttonLink="/schedule-appointment"
       />
     </>
   );

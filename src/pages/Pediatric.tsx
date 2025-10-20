@@ -112,7 +112,7 @@ export default function Pediatric() {
         title="Give Your Child the Gift of Wellness"
         description="Schedule a gentle, caring consultation for your little one today."
         buttonText="Book Pediatric Appointment"
-        buttonLink={SITE.janeUrlWithUtm}
+        buttonLink="/schedule-appointment"
       />
     </>
   );

@@ -54,14 +54,12 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              <a
-                href={SITE.janeUrlWithUtm}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/schedule-appointment"
                 className="bg-primary-dark text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-accent transition whitespace-nowrap"
               >
                 Book Appointment
-              </a>
+              </Link>
             </div>
 
             <button
@@ -90,14 +88,13 @@ export default function Header() {
                   {link.label}
                 </Link>
               ))}
-              <a
-                href={SITE.janeUrlWithUtm}
-                target="_blank"
-                rel="noopener noreferrer"
+              <Link
+                to="/schedule-appointment"
+                onClick={() => setIsMenuOpen(false)}
                 className="block mx-4 mt-4 bg-primary-dark text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-accent transition text-center"
               >
                 Book Appointment
-              </a>
+              </Link>
             </div>
           )}
         </nav>

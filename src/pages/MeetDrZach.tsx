@@ -125,7 +125,7 @@ export default function MeetDrZach() {
         title="Start Your Wellness Journey Today"
         description="Experience personalized, neurologically-focused chiropractic care for your whole family."
         buttonText="Book Your Appointment"
-        buttonLink={SITE.janeUrlWithUtm}
+        buttonLink="/schedule-appointment"
       />
     </>
   );

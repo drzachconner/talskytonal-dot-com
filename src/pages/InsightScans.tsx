@@ -206,7 +206,7 @@ export default function InsightScans() {
         title="Ready to Learn More About Your Nervous System?"
         description="Schedule a consultation to experience our INSiGHT scanning technology and discover how we can help you achieve optimal health."
         buttonText="Schedule Consultation"
-        buttonLink={SITE.janeUrlWithUtm}
+        buttonLink="/schedule-appointment"
       />
     </>
   );

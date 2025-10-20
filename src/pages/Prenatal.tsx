@@ -131,7 +131,7 @@ export default function Prenatal() {
         title="Support Your Pregnancy Journey"
         description="Experience the benefits of prenatal chiropractic care. Book your appointment today."
         buttonText="Schedule Prenatal Care"
-        buttonLink={SITE.janeUrlWithUtm}
+        buttonLink="/schedule-appointment"
       />
     </>
   );

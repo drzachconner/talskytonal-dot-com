@@ -227,7 +227,7 @@ export default function TalskyTonal() {
         title="Ready to Experience Talsky Tonal Chiropractic?"
         description="Schedule a consultation to learn how this gentle, neurologically-focused approach can help you and your family."
         buttonText="Schedule Consultation"
-        buttonLink={SITE.janeUrlWithUtm}
+        buttonLink="/schedule-appointment"
       />
     </>
   );
