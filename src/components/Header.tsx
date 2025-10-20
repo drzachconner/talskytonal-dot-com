@@ -31,8 +31,8 @@ export default function Header() {
       </a>
       <header className="bg-white shadow-sm sticky top-0 z-40">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <Link to="/" className="flex items-center space-x-2">
+          <div className="flex justify-between items-center h-16 gap-12">
+            <Link to="/" className="flex items-center flex-shrink-0">
               <img
                 src="/images/logo.webp"
                 alt={SITE.name}
