@@ -71,7 +71,11 @@ export default function AboutUs() {
               </a>
             </p>
             <p className="text-lg text-gray-700 mb-6">
-              At Cultivate Wellness, we don't guess, we test! Our state-of-the-art and non-invasive INSiGHT scanning technology allows us to measure the function and performance of your nervous system accurately, ensuring we understand precisely what's happening in your body and how best to assist you.
+              At Cultivate Wellness, we don't guess, we test! Our state-of-the-art and non-invasive{' '}
+              <a href="/insight-scans" className="text-primary-dark font-semibold hover:text-primary-accent underline">
+                INSiGHT scanning technology
+              </a>
+              {' '}allows us to measure the function and performance of your nervous system accurately, ensuring we understand precisely what's happening in your body and how best to assist you.
             </p>
 
             <h2 className="text-3xl font-heading font-bold text-gray-900 mb-6 mt-12">Specialized Care</h2>

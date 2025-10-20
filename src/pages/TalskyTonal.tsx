@@ -205,8 +205,11 @@ export default function TalskyTonal() {
             </p>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               At Cultivate Wellness Chiropractic, we combine Talsky Tonal Chiropractic with
-              state-of-the-art INSiGHT scanning technology to measure your nervous system function
-              accurately. We don't guess, we test! This allows us to create custom care plans tailored
+              state-of-the-art{' '}
+              <a href="/insight-scans" className="text-primary-dark font-semibold hover:text-primary-accent underline">
+                INSiGHT scanning technology
+              </a>
+              {' '}to measure your nervous system function accurately. We don't guess, we test! This allows us to create custom care plans tailored
               to your unique needs and track your progress objectively.
             </p>
             <div className="bg-emerald-700 text-white p-8 rounded-xl mt-8">

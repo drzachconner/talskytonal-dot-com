@@ -23,6 +23,7 @@ import RHKNGuide from './pages/RHKNGuide';
 import ThreeWaysToSleep from './pages/ThreeWaysToSleep';
 import FreeGuidesForParents from './pages/FreeGuidesForParents';
 import TalskyTonal from './pages/TalskyTonal';
+import InsightScans from './pages/InsightScans';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -62,6 +63,7 @@ function App() {
             <Route path="/3-ways-to-sleep" element={<ThreeWaysToSleep />} />
             <Route path="/free-guides-for-parents" element={<FreeGuidesForParents />} />
             <Route path="/talsky-tonal-chiropractic" element={<TalskyTonal />} />
+            <Route path="/insight-scans" element={<InsightScans />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
