@@ -35,7 +35,7 @@ export default function TalskyTonal() {
     {
       icon: Heart,
       title: 'Safe, Gentle & Effective',
-      description: 'A gentle approach that respects the intelligence of your body. No traditional bone cracking, just intuitive adjustments that work with your body\'s natural healing ability.',
+      description: 'A gentle approach that respects the intelligence of your body. No traditional bone cracking, just very specific adjustments that work with your body\'s natural healing ability.',
     },
     {
       icon: Users,
@@ -139,48 +139,15 @@ export default function TalskyTonal() {
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               Talsky Tonal Chiropractic utilizes gentle bio-feedback responses through balancing to identify
               exactly where your body is holding onto tension that it no longer needs. Instead of forceful
-              manipulations, this approach uses gentle, intuitive adjustments that respect your body's
-              inherent intelligence.
+              manipulations, this approach uses gentle and very specific adjustments that respect your body's
+              intelligence.
             </p>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
               TTC finds this "stress stuck on" and gives your body the space, permission, and information it
-              needs to release these layers of stress held in the body. Your body then learns how to better
+              needs to release these layers of tension held in the body. Your body then learns how to better
               and better adjust itself. This technique is empowering to the body rather than forcing it,
               leading to the potential of never-ending optimization with continued wellness care.
             </p>
-            <div className="bg-gray-50 rounded-xl p-8 my-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Not a Replacement, But an Enhancement</h3>
-              <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-                Talsky Tonal Chiropractic isn't a replacement technique. It's an expanded model that can
-                enhance multiple chiropractic approaches, including:
-              </p>
-              <ul className="space-y-3 text-lg text-gray-700">
-                <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-primary-dark font-bold text-sm mt-1">
-                    ✓
-                  </span>
-                  <span>Tonal Techniques</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-primary-dark font-bold text-sm mt-1">
-                    ✓
-                  </span>
-                  <span>Upper Cervical Techniques</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-primary-dark font-bold text-sm mt-1">
-                    ✓
-                  </span>
-                  <span>Pediatric Techniques</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 rounded-full flex items-center justify-center text-primary-dark font-bold text-sm mt-1">
-                    ✓
-                  </span>
-                  <span>Osseous Techniques</span>
-                </li>
-              </ul>
-            </div>
           </div>
         </div>
       </section>
@@ -193,8 +160,8 @@ export default function TalskyTonal() {
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
                 <h3 className="text-xl font-bold mb-3">Addresses Root Causes</h3>
                 <p className="text-white/90">
-                  Goes beyond symptom relief to restore nervous system function, addressing back pain,
-                  neck issues, and overall wellness at their source.
+                  Goes beyond symptom relief to restore nervous system function and optimal performance by
+                  enhancing the body's own innate ability to heal.
                 </p>
               </div>
               <div className="bg-white/10 backdrop-blur-sm p-6 rounded-lg">
