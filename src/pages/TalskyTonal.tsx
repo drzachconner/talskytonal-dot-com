@@ -64,7 +64,7 @@ export default function TalskyTonal() {
       <section className="relative py-32 bg-gray-900 min-h-[500px] flex items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=1920&h=800&fit=crop"
+            src="https://cdn.durable.co/blocks/317xUmzrt49lScphuOOyRWOPE1hvjaTLZOs3stzHKdKqn9GN0ZOFJitH5xZStWae.jpg"
             alt="Talsky Tonal Chiropractic"
             className="w-full h-full object-cover opacity-40"
           />
