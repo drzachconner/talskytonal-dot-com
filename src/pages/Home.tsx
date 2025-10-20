@@ -239,37 +239,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="py-12 bg-gray-50">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
-            <a
-              href="https://pxdocs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block hover:opacity-80 transition-opacity"
-            >
-              <img
-                src="/images/px-docs-logo.svg"
-                alt="PX Docs"
-                className="w-full h-auto"
-              />
-            </a>
-            <a
-              href="https://talskydocs.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block hover:opacity-80 transition-opacity"
-            >
-              <img
-                src="/images/talsky-docs-logo.svg"
-                alt="Talsky Docs"
-                className="w-full h-auto"
-              />
-            </a>
-          </div>
-        </div>
-      </section>
-
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-heading font-bold text-gray-900 mb-8 text-center">Office Hours</h2>
