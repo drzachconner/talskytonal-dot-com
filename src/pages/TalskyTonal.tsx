@@ -69,7 +69,7 @@ export default function TalskyTonal() {
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-blue-900/80 to-primary-dark/70" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-primary-dark/50 to-primary/40" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             Talsky Tonal Chiropractic
