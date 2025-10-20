@@ -97,12 +97,6 @@ export default function TalskyTonal() {
               in the body, restoring the integrity and function of your nervous system so your body can heal
               and perform at its optimal level.
             </p>
-            <div className="bg-emerald-50 border-l-4 border-emerald-700 p-6 rounded-lg my-8">
-              <p className="text-xl text-gray-900 italic font-medium">
-                "The miracle is in your body"
-              </p>
-              <p className="text-gray-700 mt-2">— Dr. Marvin Talsky</p>
-            </div>
           </div>
         </div>
       </section>
@@ -236,7 +230,7 @@ export default function TalskyTonal() {
               Expert Talsky Tonal Care at Cultivate Wellness
             </h2>
             <p className="text-lg text-gray-700 mb-6 leading-relaxed">
-              Dr. Zach is one of only two certified U.S. instructors of Talsky Tonal Chiropractic,
+              Dr. Zach is one of two certified teachers of Talsky Tonal Chiropractic,
               bringing the highest level of expertise in this specialized technique to our community.
               With a special interest in caring for children with sensory and developmental differences,
               Dr. Zach has witnessed the profound transformative effects this gentle approach can have

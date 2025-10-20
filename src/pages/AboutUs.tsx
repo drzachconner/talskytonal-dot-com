@@ -65,7 +65,7 @@ export default function AboutUs() {
               We take a "nerve first" approach through our specialized practice of Talsky Tonal Chiropractic. This unique and gentle yet powerful technique respects the intelligence of the body. It's particularly effective for children with special needs and has profound effects on people of all ages and backgrounds.
             </p>
             <p className="text-lg text-gray-700 mb-6">
-              Dr. Zach is one of only two certified U.S. instructors of Talsky Tonal, bringing advanced expertise in this neurologically-focused approach. This gentle technique uses bio-feedback responses to identify where the body is holding unnecessary tension, empowering the body to release accumulated stress patterns and restore optimal nervous system function.{' '}
+              Dr. Zach is one of two certified teachers of Talsky Tonal, bringing advanced expertise in this neurologically-focused approach. This gentle technique uses bio-feedback responses to identify where the body is holding unnecessary tension, empowering the body to release accumulated stress patterns and restore optimal nervous system function.{' '}
               <a href="/talsky-tonal-chiropractic" className="text-primary-dark font-semibold hover:text-primary-accent underline">
                 Learn more about Talsky Tonal Chiropractic →
               </a>
