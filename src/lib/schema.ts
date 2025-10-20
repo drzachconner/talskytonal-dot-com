@@ -6,6 +6,7 @@ export function organizationSchema() {
     '@type': 'MedicalBusiness',
     '@id': `https://${SITE.domain}/#organization`,
     name: SITE.name,
+    alternateName: 'Cultivate Wellness',
     url: `https://${SITE.domain}`,
     logo: `https://${SITE.domain}/images/logo.webp`,
     image: `https://${SITE.domain}/images/hero-family.webp`,
@@ -13,6 +14,7 @@ export function organizationSchema() {
     priceRange: SITE.priceRange,
     telephone: SITE.phone,
     email: SITE.email,
+    foundingDate: '2020',
     address: {
       '@type': 'PostalAddress',
       streetAddress: SITE.address.street,
@@ -25,6 +27,15 @@ export function organizationSchema() {
       '@type': 'GeoCoordinates',
       latitude: SITE.geo.latitude,
       longitude: SITE.geo.longitude,
+    },
+    areaServed: {
+      '@type': 'GeoCircle',
+      geoMidpoint: {
+        '@type': 'GeoCoordinates',
+        latitude: SITE.geo.latitude,
+        longitude: SITE.geo.longitude,
+      },
+      geoRadius: '30000',
     },
     openingHoursSpecification: [
       {
@@ -45,7 +56,9 @@ export function organizationSchema() {
       SITE.socials.instagram,
       SITE.socials.tiktok,
       SITE.socials.youtube,
+      `https://www.google.com/maps/place/?q=place_id:ChIJBQUKW2fJJIgRZoaJtd9K7ac`,
     ],
+    hasMap: `https://www.google.com/maps/place/Cultivate+Wellness+Chiropractic/@${SITE.geo.latitude},${SITE.geo.longitude}`,
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
       name: 'Chiropractic Services',
@@ -93,19 +106,53 @@ export function personSchema() {
     '@type': 'Person',
     '@id': `https://${SITE.domain}/#dr-zach`,
     name: 'Dr. Zach Talsky',
+    givenName: 'Zach',
+    familyName: 'Talsky',
+    honorificPrefix: 'Dr.',
+    honorificSuffix: 'DC',
     jobTitle: 'Doctor of Chiropractic',
     description: 'Board-certified chiropractor specializing in pediatric, prenatal, and family care. Certified teacher of Talsky Tonal Chiropractic.',
     image: `https://${SITE.domain}/images/dr-zach.webp`,
+    url: `https://${SITE.domain}/meet-dr-zach`,
     worksFor: {
       '@id': `https://${SITE.domain}/#organization`,
     },
-    alumniOf: 'Palmer College of Chiropractic',
+    alumniOf: {
+      '@type': 'CollegeOrUniversity',
+      name: 'Palmer College of Chiropractic',
+      sameAs: 'https://www.wikidata.org/wiki/Q7128545',
+    },
+    hasCredential: [
+      {
+        '@type': 'EducationalOccupationalCredential',
+        credentialCategory: 'degree',
+        name: 'Doctor of Chiropractic',
+      },
+    ],
     knowsAbout: [
-      'Pediatric Chiropractic',
-      'Prenatal Chiropractic',
-      'Talsky Tonal Chiropractic',
+      {
+        '@type': 'Thing',
+        name: 'Pediatric Chiropractic',
+        url: `https://${SITE.domain}/pediatric`,
+      },
+      {
+        '@type': 'Thing',
+        name: 'Prenatal Chiropractic',
+        url: `https://${SITE.domain}/prenatal`,
+      },
+      {
+        '@type': 'Thing',
+        name: 'Talsky Tonal Chiropractic',
+        url: `https://${SITE.domain}/talsky-tonal-chiropractic`,
+      },
       'Neurological Development',
       'Family Wellness',
+      'Webster Technique',
+      'INSiGHT Scans',
+    ],
+    sameAs: [
+      SITE.socials.facebook,
+      SITE.socials.youtube,
     ],
   };
 }
@@ -165,20 +212,35 @@ export function articleSchema(article: {
   dateModified: string;
   author: string;
   url: string;
+  reviewedBy?: {
+    name: string;
+    credentials: string;
+  };
+  wordCount?: number;
 }) {
   return {
     '@context': 'https://schema.org',
-    '@type': 'Article',
+    '@type': 'MedicalWebPage',
     headline: article.headline,
     description: article.description,
     image: `https://${SITE.domain}${article.image}`,
     datePublished: article.datePublished,
     dateModified: article.dateModified,
+    lastReviewed: article.dateModified,
     author: {
       '@type': 'Person',
       name: article.author,
       '@id': `https://${SITE.domain}/#dr-zach`,
+      jobTitle: 'Doctor of Chiropractic',
+      hasCredential: 'Doctor of Chiropractic',
     },
+    ...(article.reviewedBy && {
+      reviewedBy: {
+        '@type': 'Person',
+        name: article.reviewedBy.name,
+        jobTitle: article.reviewedBy.credentials,
+      },
+    }),
     publisher: {
       '@id': `https://${SITE.domain}/#organization`,
     },
@@ -186,6 +248,9 @@ export function articleSchema(article: {
       '@type': 'WebPage',
       '@id': `https://${SITE.domain}${article.url}`,
     },
+    ...(article.wordCount && { wordCount: article.wordCount }),
+    inLanguage: 'en-US',
+    isAccessibleForFree: true,
   };
 }
 
@@ -228,6 +293,52 @@ export function howToSchema(howTo: {
       name: step.name,
       text: step.text,
     })),
+  };
+}
+
+export function aggregateRatingSchema(rating: {
+  ratingValue: number;
+  reviewCount: number;
+  bestRating?: number;
+  worstRating?: number;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'AggregateRating',
+    ratingValue: rating.ratingValue,
+    reviewCount: rating.reviewCount,
+    bestRating: rating.bestRating || 5,
+    worstRating: rating.worstRating || 1,
+    itemReviewed: {
+      '@id': `https://${SITE.domain}/#organization`,
+    },
+  };
+}
+
+export function reviewSchema(review: {
+  author: string;
+  datePublished: string;
+  reviewBody: string;
+  ratingValue: number;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Review',
+    author: {
+      '@type': 'Person',
+      name: review.author,
+    },
+    datePublished: review.datePublished,
+    reviewBody: review.reviewBody,
+    reviewRating: {
+      '@type': 'Rating',
+      ratingValue: review.ratingValue,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    itemReviewed: {
+      '@id': `https://${SITE.domain}/#organization`,
+    },
   };
 }
 

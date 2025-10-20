@@ -2,8 +2,9 @@ import { useSeo } from '../hooks/useSeo';
 import { SITE } from '../data/site';
 import { useEffect } from 'react';
 import { breadcrumbJsonLd } from '../lib/breadcrumbs';
-import { faqSchema } from '../lib/schema';
+import { faqSchema, articleSchema } from '../lib/schema';
 import { HelpCircle, Baby, Users, Heart } from 'lucide-react';
+import AuthorByline from '../components/AuthorByline';
 
 export default function AnswerHub() {
   useSeo({
@@ -110,6 +111,23 @@ export default function AnswerHub() {
     document.head.appendChild(faqScript);
     scripts.push(faqScript);
 
+    const articleScript = document.createElement('script');
+    articleScript.type = 'application/ld+json';
+    articleScript.text = JSON.stringify(
+      articleSchema({
+        headline: 'Common Questions About Chiropractic Care',
+        description: 'Comprehensive answers to frequently asked questions about pediatric, prenatal, and family chiropractic care.',
+        image: '/images/hero-family.webp',
+        datePublished: '2024-01-15',
+        dateModified: '2025-10-20',
+        author: 'Dr. Zach Talsky',
+        url: '/answers',
+        wordCount: 2800,
+      })
+    );
+    document.head.appendChild(articleScript);
+    scripts.push(articleScript);
+
     return () => {
       scripts.forEach((script) => {
         if (script.parentNode) {
@@ -148,7 +166,12 @@ export default function AnswerHub() {
 
       <section className="py-16 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="space-y-8">
+          <AuthorByline
+            publishDate="2024-01-15"
+            modifiedDate="2025-10-20"
+          />
+
+          <article className="space-y-8">
             {faqs.map((faq, index) => (
               <div key={index} className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden">
                 <div className="p-6">
@@ -167,9 +190,9 @@ export default function AnswerHub() {
                 </div>
               </div>
             ))}
-          </div>
+          </article>
 
-          <div className="mt-12 bg-emerald-700 rounded-xl p-8 text-center">
+          <aside className="mt-12 bg-emerald-700 rounded-xl p-8 text-center">
             <h2 className="text-2xl font-bold text-white mb-4">Still Have Questions?</h2>
             <p className="text-emerald-50 mb-6">
               We're here to help! Contact us directly or schedule a consultation to discuss your specific concerns.
@@ -190,7 +213,7 @@ export default function AnswerHub() {
                 Schedule Appointment
               </a>
             </div>
-          </div>
+          </aside>
         </div>
       </section>
     </>
