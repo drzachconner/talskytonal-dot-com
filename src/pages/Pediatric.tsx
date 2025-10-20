@@ -4,7 +4,8 @@ import { useEffect } from 'react';
 import { breadcrumbJsonLd } from '../lib/breadcrumbs';
 import { Baby, Heart, Shield, Smile } from 'lucide-react';
 import CTABanner from '../components/CTABanner';
-import { serviceSchema } from '../lib/schema';
+import { medicalWebPageSchema } from '../lib/schema';
+import AboutThisPage from '../components/AboutThisPage';
 
 export default function Pediatric() {
   useSeo({
@@ -25,16 +26,26 @@ export default function Pediatric() {
     document.head.appendChild(breadcrumbScript);
     scripts.push(breadcrumbScript);
 
-    const serviceScript = document.createElement('script');
-    serviceScript.type = 'application/ld+json';
-    serviceScript.text = JSON.stringify(serviceSchema({
-      name: 'Pediatric Chiropractic Care',
-      description: 'Specialized chiropractic care for infants and children, supporting healthy nervous system development, addressing colic, sleep issues, developmental challenges, and promoting overall wellness from birth through adolescence.',
-      image: '/images/pediatric-care.webp',
-      url: '/pediatric',
-    }));
-    document.head.appendChild(serviceScript);
-    scripts.push(serviceScript);
+    const medicalScript = document.createElement('script');
+    medicalScript.type = 'application/ld+json';
+    medicalScript.text = JSON.stringify(
+      medicalWebPageSchema({
+        headline: 'Pediatric Chiropractic Care for Children & Infants',
+        description: 'Specialized chiropractic care for infants and children, supporting healthy nervous system development, addressing colic, sleep issues, developmental challenges, and promoting overall wellness from birth through adolescence.',
+        image: '/images/pediatric-care.webp',
+        datePublished: '2024-01-10',
+        dateModified: '2025-10-20',
+        author: 'Dr. Zach Talsky',
+        url: '/pediatric',
+        therapy: {
+          name: 'Pediatric Chiropractic Care',
+          description: 'Gentle, specialized chiropractic adjustments tailored for developing spines and nervous systems from birth through adolescence',
+        },
+        wordCount: 1200,
+      })
+    );
+    document.head.appendChild(medicalScript);
+    scripts.push(medicalScript);
 
     return () => {
       scripts.forEach((script) => {
@@ -90,6 +101,30 @@ export default function Pediatric() {
 
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <AboutThisPage
+            topic="Pediatric Chiropractic Care"
+            topicUrl="https://en.wikipedia.org/wiki/Chiropractic"
+            wikidataId="Q184711"
+            datePublished="2024-01-10"
+            dateModified="2025-10-20"
+            sources={[
+              {
+                name: 'International Chiropractic Pediatric Association',
+                url: 'https://www.icpa4kids.com/',
+              },
+              {
+                name: 'CDC Child Development',
+                url: 'https://www.cdc.gov/child-development/',
+              },
+            ]}
+            keyFacts={[
+              'Safe for infants from birth with specialized gentle techniques',
+              'Supports healthy nervous system development',
+              'May help with colic, sleep issues, and developmental challenges',
+              '80% of parents report improvement in first 4-8 weeks',
+            ]}
+          />
+
           <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">
             Benefits for Your Child
           </h2>

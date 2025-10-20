@@ -27,6 +27,7 @@ import TalskyTonal from './pages/TalskyTonal';
 import InsightScans from './pages/InsightScans';
 import AnswerHub from './pages/AnswerHub';
 import { organizationSchema, personSchema, localBusinessSchema } from './lib/schema';
+import { trackAITraffic } from './lib/analytics';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -34,6 +35,14 @@ function ScrollToTop() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  return null;
+}
+
+function AITrafficTracker() {
+  useEffect(() => {
+    trackAITraffic();
+  }, []);
 
   return null;
 }
@@ -77,6 +86,7 @@ function App() {
     <BrowserRouter>
       <ScrollToTop />
       <GlobalSchema />
+      <AITrafficTracker />
       <div className="min-h-screen flex flex-col">
         <Header />
         <main id="main" className="flex-grow">

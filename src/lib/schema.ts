@@ -342,6 +342,87 @@ export function reviewSchema(review: {
   };
 }
 
+export function medicalWebPageSchema(page: {
+  headline: string;
+  description: string;
+  image: string;
+  datePublished: string;
+  dateModified: string;
+  author: string;
+  url: string;
+  condition?: {
+    name: string;
+    description?: string;
+    wikipediaUrl?: string;
+    wikidataId?: string;
+  };
+  therapy?: {
+    name: string;
+    description: string;
+  };
+  reviewedBy?: {
+    name: string;
+    credentials: string;
+  };
+  wordCount?: number;
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'MedicalWebPage',
+    headline: page.headline,
+    description: page.description,
+    image: `https://${SITE.domain}${page.image}`,
+    datePublished: page.datePublished,
+    dateModified: page.dateModified,
+    lastReviewed: page.dateModified,
+    ...(page.condition && {
+      about: {
+        '@type': 'MedicalCondition',
+        name: page.condition.name,
+        ...(page.condition.description && { description: page.condition.description }),
+        ...(page.condition.wikipediaUrl && { url: page.condition.wikipediaUrl }),
+        ...(page.condition.wikidataId && {
+          sameAs: `https://www.wikidata.org/wiki/${page.condition.wikidataId}`,
+        }),
+      },
+    }),
+    ...(page.therapy && {
+      mentions: [
+        {
+          '@type': 'MedicalTherapy',
+          name: page.therapy.name,
+          description: page.therapy.description,
+          sameAs: 'https://en.wikipedia.org/wiki/Chiropractic',
+        },
+      ],
+    }),
+    author: {
+      '@type': 'Person',
+      name: page.author,
+      '@id': `https://${SITE.domain}/#dr-zach`,
+      jobTitle: 'Doctor of Chiropractic',
+      hasCredential: 'Doctor of Chiropractic',
+    },
+    ...(page.reviewedBy && {
+      reviewedBy: {
+        '@type': 'Person',
+        name: page.reviewedBy.name,
+        jobTitle: page.reviewedBy.credentials,
+      },
+    }),
+    publisher: {
+      '@id': `https://${SITE.domain}/#organization`,
+    },
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://${SITE.domain}${page.url}`,
+    },
+    ...(page.wordCount && { wordCount: page.wordCount }),
+    inLanguage: 'en-US',
+    isAccessibleForFree: true,
+  };
+}
+
 export function injectSchema(schema: object) {
   if (typeof window !== 'undefined') {
     const script = document.createElement('script');

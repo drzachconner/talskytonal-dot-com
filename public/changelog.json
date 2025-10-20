@@ -1,0 +1,32 @@
+{
+  "updates": [
+    {
+      "url": "/answers",
+      "dateModified": "2025-10-20",
+      "change": "Added comprehensive FAQ page with 10 detailed answers covering pediatric, prenatal, and family chiropractic care",
+      "type": "content-new"
+    },
+    {
+      "url": "/pediatric",
+      "dateModified": "2025-10-20",
+      "change": "Enhanced with service schema and updated medical information",
+      "type": "content-refresh"
+    },
+    {
+      "url": "/3-ways-to-sleep",
+      "dateModified": "2025-10-20",
+      "change": "Added article schema, HowTo schema, and step-by-step guidance",
+      "type": "content-update"
+    },
+    {
+      "url": "/",
+      "dateModified": "2025-10-20",
+      "change": "Updated with enhanced organization schema and entity linking",
+      "type": "schema-update"
+    }
+  ],
+  "lastGenerated": "2025-10-20T14:32:00Z",
+  "version": "1.0.0",
+  "site": "Cultivate Wellness Chiropractic",
+  "totalPages": 19
+}
