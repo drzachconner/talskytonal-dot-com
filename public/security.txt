@@ -1,0 +1,8 @@
+Contact: mailto:info@cultivatewellnesschiro.com
+Expires: 2026-10-20T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://cultivatewellnesschiro.com/.well-known/security.txt
+
+# Security Policy
+# If you discover a security vulnerability, please email us at info@cultivatewellnesschiro.com
+# We appreciate responsible disclosure and will respond promptly to valid reports.

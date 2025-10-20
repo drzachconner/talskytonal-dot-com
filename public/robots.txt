@@ -1,24 +1,70 @@
+# Cultivate Wellness Chiropractic - Robots Configuration
+# Last updated: 2025-10-20
+
+# Default crawlers - Allow all content except thank you pages
 User-agent: *
 Allow: /
 Disallow: /thanks
 
+# Google Search - Full access
 User-agent: Googlebot
 Allow: /
 
 User-agent: Googlebot-Image
 Allow: /
 
-User-agent: ChatGPT-User
-Allow: /
+# ====================================================================
+# AI TRAINING CRAWLERS - Toggle these based on your preference
+# ====================================================================
+#
+# IMPORTANT: These settings control AI model TRAINING, not search visibility
+#
+# GPTBot: OpenAI's crawler for training ChatGPT models
+# Google-Extended: Google's crawler for training Gemini/Bard models
+#
+# Current setting: ALLOWED (helps with AI search visibility)
+# To block training: Change "Allow: /" to "Disallow: /"
+#
+# Trade-offs:
+# - Allowing = Better AI citations, more visibility in AI search results
+# - Blocking = Your content won't train models, but may reduce AI visibility
+# ====================================================================
 
 User-agent: GPTBot
 Allow: /
 
+User-agent: Google-Extended
+Allow: /
+
+# ====================================================================
+# AI SEARCH CRAWLERS - Keep these allowed for AI search visibility
+# ====================================================================
+
+# ChatGPT Search - OpenAI's search product
+User-agent: ChatGPT-User
+Allow: /
+
+# Perplexity AI Search
 User-agent: PerplexityBot
 Allow: /
 
+# Anthropic Claude
 User-agent: ClaudeBot
 Allow: /
+
+# Additional AI search crawlers (can be enabled as needed)
+# User-agent: Applebot-Extended
+# Allow: /
+
+# User-agent: FacebookBot
+# Allow: /
+
+# User-agent: cohere-ai
+# Allow: /
+
+# ====================================================================
+# SITEMAPS & HOST INFORMATION
+# ====================================================================
 
 Sitemap: https://cultivatewellnesschiro.com/sitemap.xml
 Host: https://cultivatewellnesschiro.com

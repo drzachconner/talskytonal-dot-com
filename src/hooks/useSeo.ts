@@ -6,9 +6,12 @@ interface SeoProps {
   description?: string;
   canonical?: string;
   ogImage?: string;
+  maxSnippet?: number;
+  noSnippet?: boolean;
+  robots?: string;
 }
 
-export function useSeo({ title, description, canonical, ogImage }: SeoProps) {
+export function useSeo({ title, description, canonical, ogImage, maxSnippet, noSnippet, robots }: SeoProps) {
   useEffect(() => {
     const fullTitle = title === SITE.name ? title : `${title} | ${SITE.name}`;
     document.title = fullTitle;
@@ -53,5 +56,27 @@ export function useSeo({ title, description, canonical, ogImage }: SeoProps) {
     twitterCardTag.setAttribute('name', 'twitter:card');
     twitterCardTag.setAttribute('content', 'summary_large_image');
     if (!twitterCardTag.parentNode) document.head.appendChild(twitterCardTag);
-  }, [title, description, canonical, ogImage]);
+
+    let robotsTag = document.querySelector('meta[name="robots"]');
+    if (robots || maxSnippet || noSnippet) {
+      if (!robotsTag) {
+        robotsTag = document.createElement('meta');
+        robotsTag.setAttribute('name', 'robots');
+        document.head.appendChild(robotsTag);
+      }
+
+      const robotsDirectives = [];
+      if (robots) {
+        robotsDirectives.push(robots);
+      }
+      if (maxSnippet) {
+        robotsDirectives.push(`max-snippet:${maxSnippet}`);
+      }
+      if (noSnippet) {
+        robotsDirectives.push('nosnippet');
+      }
+
+      robotsTag.setAttribute('content', robotsDirectives.join(', '));
+    }
+  }, [title, description, canonical, ogImage, maxSnippet, noSnippet, robots]);
 }

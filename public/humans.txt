@@ -1,0 +1,15 @@
+/* TEAM */
+Practice Owner: Dr. Zach Talsky, DC
+Title: Doctor of Chiropractic
+Location: Rochester Hills, MI
+
+/* THANKS */
+Built with care for families seeking natural health solutions
+Special thanks to our patients and community
+
+/* SITE */
+Last update: 2025-10-20
+Standards: HTML5, CSS3, JavaScript ES6+
+Components: React, TypeScript, Tailwind CSS
+Software: Vite, Supabase
+Optimization: WebP images, JSON-LD structured data, AI search ready

@@ -2,6 +2,7 @@ import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
 import { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
+import MobileCTA from './components/MobileCTA';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import MeetDrZach from './pages/MeetDrZach';
@@ -24,6 +25,7 @@ import ThreeWaysToSleep from './pages/ThreeWaysToSleep';
 import FreeGuidesForParents from './pages/FreeGuidesForParents';
 import TalskyTonal from './pages/TalskyTonal';
 import InsightScans from './pages/InsightScans';
+import AnswerHub from './pages/AnswerHub';
 import { organizationSchema, personSchema, localBusinessSchema } from './lib/schema';
 
 function ScrollToTop() {
@@ -101,10 +103,12 @@ function App() {
             <Route path="/free-guides-for-parents" element={<FreeGuidesForParents />} />
             <Route path="/talsky-tonal-chiropractic" element={<TalskyTonal />} />
             <Route path="/insight-scans" element={<InsightScans />} />
+            <Route path="/answers" element={<AnswerHub />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
+        <MobileCTA />
       </div>
     </BrowserRouter>
   );
