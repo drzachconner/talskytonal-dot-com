@@ -64,12 +64,12 @@ export default function TalskyTonal() {
       <section className="relative py-32 bg-gray-900 min-h-[500px] flex items-center">
         <div className="absolute inset-0 z-0">
           <img
-            src="https://cdn.durable.co/blocks/317xUmzrt49lScphuOOyRWOPE1hvjaTLZOs3stzHKdKqn9GN0ZOFJitH5xZStWae.jpg"
+            src="/images/Talsky at source2.jpg"
             alt="Talsky Tonal Chiropractic"
-            className="w-full h-full object-cover opacity-40"
+            className="w-full h-full object-cover"
           />
         </div>
-        <div className="absolute inset-0 z-0 bg-gradient-to-r from-primary-dark/80 to-primary/70" />
+        <div className="absolute inset-0 z-0 bg-gradient-to-r from-blue-900/80 to-primary-dark/70" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6">
             Talsky Tonal Chiropractic
