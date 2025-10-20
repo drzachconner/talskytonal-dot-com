@@ -119,8 +119,8 @@ export function personSchema() {
     },
     alumniOf: {
       '@type': 'CollegeOrUniversity',
-      name: 'Palmer College of Chiropractic',
-      sameAs: 'https://www.wikidata.org/wiki/Q7128545',
+      name: 'Life University College of Chiropractic',
+      sameAs: 'https://www.wikidata.org/wiki/Q6545465',
     },
     hasCredential: [
       {

@@ -63,9 +63,9 @@ export default function ScheduleAppointment() {
               <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mb-6 mx-auto">
                 <Calendar size={32} />
               </div>
-              <h3 className="text-2xl font-bold mb-4 text-center">Current Practice Members</h3>
+              <h3 className="text-2xl font-bold mb-4 text-center">Current Cultivate Wellness Practice Members</h3>
               <p className="text-emerald-50 mb-6 text-center">
-                If you're already a patient, schedule your next appointment online:
+                Schedule your appointment at CWC here:
               </p>
               <a
                 href={SITE.janeUrlWithUtm}
@@ -73,7 +73,7 @@ export default function ScheduleAppointment() {
                 rel="noopener noreferrer"
                 className="block w-full bg-white text-emerald-700 py-4 rounded-lg font-bold text-lg hover:bg-emerald-50 transition text-center shadow-md"
               >
-                Schedule Online
+                Schedule at CWC
               </a>
             </div>
 
@@ -83,7 +83,7 @@ export default function ScheduleAppointment() {
               </div>
               <h3 className="text-2xl font-bold mb-4 text-center">New Patients</h3>
               <p className="text-blue-50 mb-6 text-center">
-                Call to schedule your first appointment with Dr. Zach:
+                Call Van Every Chiropractic to schedule your first appointment with Dr. Zach:
               </p>
               <a
                 href="tel:+1-248-616-0900"
@@ -92,7 +92,7 @@ export default function ScheduleAppointment() {
                 (248) 616-0900
               </a>
               <p className="text-blue-100 text-sm mt-4 text-center">
-                Please mention you were referred from Cultivate Wellness Chiropractic
+                Please mention you're coming from Cultivate Wellness Chiropractic
               </p>
             </div>
           </div>
