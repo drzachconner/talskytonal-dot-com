@@ -24,6 +24,7 @@ import ThreeWaysToSleep from './pages/ThreeWaysToSleep';
 import FreeGuidesForParents from './pages/FreeGuidesForParents';
 import TalskyTonal from './pages/TalskyTonal';
 import InsightScans from './pages/InsightScans';
+import { organizationSchema, personSchema, localBusinessSchema } from './lib/schema';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -35,10 +36,45 @@ function ScrollToTop() {
   return null;
 }
 
+function GlobalSchema() {
+  useEffect(() => {
+    const scripts: HTMLScriptElement[] = [];
+
+    const orgScript = document.createElement('script');
+    orgScript.type = 'application/ld+json';
+    orgScript.text = JSON.stringify(organizationSchema());
+    document.head.appendChild(orgScript);
+    scripts.push(orgScript);
+
+    const personScript = document.createElement('script');
+    personScript.type = 'application/ld+json';
+    personScript.text = JSON.stringify(personSchema());
+    document.head.appendChild(personScript);
+    scripts.push(personScript);
+
+    const localScript = document.createElement('script');
+    localScript.type = 'application/ld+json';
+    localScript.text = JSON.stringify(localBusinessSchema());
+    document.head.appendChild(localScript);
+    scripts.push(localScript);
+
+    return () => {
+      scripts.forEach((script) => {
+        if (script.parentNode) {
+          document.head.removeChild(script);
+        }
+      });
+    };
+  }, []);
+
+  return null;
+}
+
 function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <GlobalSchema />
       <div className="min-h-screen flex flex-col">
         <Header />
         <main id="main" className="flex-grow">

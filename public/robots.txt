@@ -2,5 +2,23 @@ User-agent: *
 Allow: /
 Disallow: /thanks
 
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
 Sitemap: https://cultivatewellnesschiro.com/sitemap.xml
 Host: https://cultivatewellnesschiro.com

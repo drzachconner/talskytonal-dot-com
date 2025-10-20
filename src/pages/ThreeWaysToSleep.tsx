@@ -2,6 +2,7 @@ import { useSeo } from '../hooks/useSeo';
 import { SITE } from '../data/site';
 import { useEffect } from 'react';
 import { breadcrumbJsonLd } from '../lib/breadcrumbs';
+import { articleSchema, howToSchema } from '../lib/schema';
 
 export default function ThreeWaysToSleep() {
   useSeo({
@@ -11,6 +12,8 @@ export default function ThreeWaysToSleep() {
   });
 
   useEffect(() => {
+    const scripts: HTMLScriptElement[] = [];
+
     const breadcrumbScript = document.createElement('script');
     breadcrumbScript.type = 'application/ld+json';
     breadcrumbScript.text = JSON.stringify(breadcrumbJsonLd([
@@ -18,9 +21,53 @@ export default function ThreeWaysToSleep() {
       { name: '3 Ways to Sleep Better', url: `https://${SITE.domain}/3-ways-to-sleep` },
     ]));
     document.head.appendChild(breadcrumbScript);
+    scripts.push(breadcrumbScript);
+
+    const articleScript = document.createElement('script');
+    articleScript.type = 'application/ld+json';
+    articleScript.text = JSON.stringify(articleSchema({
+      headline: '3 Ways to Improve Your Child\'s Sleep',
+      description: 'Simple, effective strategies to help your child sleep better naturally through chiropractic care and wellness practices.',
+      image: '/images/sleep-guide.webp',
+      datePublished: '2024-01-01',
+      dateModified: '2025-10-20',
+      author: 'Dr. Zach Talsky',
+      url: '/3-ways-to-sleep',
+    }));
+    document.head.appendChild(articleScript);
+    scripts.push(articleScript);
+
+    const howToScript = document.createElement('script');
+    howToScript.type = 'application/ld+json';
+    howToScript.text = JSON.stringify(howToSchema({
+      name: '3 Ways to Improve Your Child\'s Sleep',
+      description: 'Learn three practical, natural approaches to support healthy sleep patterns in children.',
+      image: '/images/sleep-guide.webp',
+      totalTime: 'P7D',
+      steps: [
+        {
+          name: 'Optimize Nervous System Function',
+          text: 'Address nervous system stress through gentle chiropractic care to help the body naturally regulate sleep cycles.',
+        },
+        {
+          name: 'Establish Consistent Sleep Routines',
+          text: 'Create calming bedtime rituals and maintain consistent sleep schedules to support your child\'s natural circadian rhythm.',
+        },
+        {
+          name: 'Create a Sleep-Conducive Environment',
+          text: 'Ensure the bedroom is dark, cool, quiet, and free from electronic devices to promote deep, restorative sleep.',
+        },
+      ],
+    }));
+    document.head.appendChild(howToScript);
+    scripts.push(howToScript);
 
     return () => {
-      document.head.removeChild(breadcrumbScript);
+      scripts.forEach((script) => {
+        if (script.parentNode) {
+          document.head.removeChild(script);
+        }
+      });
     };
   }, []);
 

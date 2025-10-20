@@ -4,6 +4,7 @@ import { useEffect } from 'react';
 import { breadcrumbJsonLd } from '../lib/breadcrumbs';
 import { Baby, Heart, Shield, Smile } from 'lucide-react';
 import CTABanner from '../components/CTABanner';
+import { serviceSchema } from '../lib/schema';
 
 export default function Pediatric() {
   useSeo({
@@ -13,16 +14,34 @@ export default function Pediatric() {
   });
 
   useEffect(() => {
-    const script = document.createElement('script');
-    script.type = 'application/ld+json';
-    script.text = JSON.stringify(breadcrumbJsonLd([
+    const scripts: HTMLScriptElement[] = [];
+
+    const breadcrumbScript = document.createElement('script');
+    breadcrumbScript.type = 'application/ld+json';
+    breadcrumbScript.text = JSON.stringify(breadcrumbJsonLd([
       { name: 'Home', url: `https://${SITE.domain}/` },
       { name: 'Pediatric', url: `https://${SITE.domain}/pediatric` },
     ]));
-    document.head.appendChild(script);
+    document.head.appendChild(breadcrumbScript);
+    scripts.push(breadcrumbScript);
+
+    const serviceScript = document.createElement('script');
+    serviceScript.type = 'application/ld+json';
+    serviceScript.text = JSON.stringify(serviceSchema({
+      name: 'Pediatric Chiropractic Care',
+      description: 'Specialized chiropractic care for infants and children, supporting healthy nervous system development, addressing colic, sleep issues, developmental challenges, and promoting overall wellness from birth through adolescence.',
+      image: '/images/pediatric-care.webp',
+      url: '/pediatric',
+    }));
+    document.head.appendChild(serviceScript);
+    scripts.push(serviceScript);
 
     return () => {
-      document.head.removeChild(script);
+      scripts.forEach((script) => {
+        if (script.parentNode) {
+          document.head.removeChild(script);
+        }
+      });
     };
   }, []);
 
