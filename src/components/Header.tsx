@@ -40,7 +40,7 @@ export default function Header() {
               />
             </Link>
 
-            <div className="hidden xl:flex items-center space-x-6">
+            <div className="hidden xl:flex items-center space-x-8">
               {navLinks.map((link) => (
                 <Link
                   key={link.to}
