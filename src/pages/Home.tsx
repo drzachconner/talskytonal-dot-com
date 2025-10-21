@@ -242,6 +242,13 @@ export default function Home() {
       <section className="py-16 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <h2 className="text-3xl font-heading font-bold text-gray-900 mb-8 text-center">Office Hours</h2>
+          <div className="mb-8 px-4 py-6 bg-blue-50 border border-blue-200 rounded-lg">
+            <p className="text-center text-gray-800 leading-relaxed">
+              <strong className="text-blue-900">For Current Practice Members:</strong> These are our office hours for existing patients.<br />
+              <strong className="text-blue-900 mt-3 block">New Patients:</strong> We have merged with Van Every Family Chiropractic Center and are no longer accepting new patients at this location. To schedule a new patient appointment with Dr. Zach, please call <a href="tel:+12482211118" className="text-primary-dark font-semibold hover:underline">(248) 221-1118</a>.<br />
+              <span className="text-sm italic mt-2 block">Please mention that you were referred by Cultivate Wellness Chiropractic to see Dr. Zach.</span>
+            </p>
+          </div>
           <div className="flex justify-center">
             <img
               src="/images/office-hours.webp"
