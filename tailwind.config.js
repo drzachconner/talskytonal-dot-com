@@ -4,17 +4,29 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: {
-          DEFAULT: '#506b8e',
-          dark: '#3d5270',
-          light: '#6d89af',
-          accent: '#506b8e',
-          cream: '#ECDCBA',
+        ttc: {
+          blue: '#4A6BA5',
+          navy: '#2C3E50',
+          cream: '#E8DCC8',
+          'blue-hover': '#3D5481',
+        },
+        text: {
+          dark: '#333333',
+          light: '#666666',
+          neutral: '#555555',
+        },
+        border: {
+          light: '#E5E5E5',
         },
       },
       fontFamily: {
-        sans: ['Open Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
-        heading: ['Work Sans', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        sans: ['Open Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        heading: ['Work Sans', '-apple-system', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'sans-serif'],
+        serif: ['Georgia', 'Garamond', 'serif'],
+        script: ['cursive'],
+      },
+      letterSpacing: {
+        wider: '0.08em',
       },
     },
   },
