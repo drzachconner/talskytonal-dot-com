@@ -40,7 +40,7 @@ export default function MergerNotification() {
             />
             <div className="text-white">
               <p className="font-bold text-sm">We've Merged!</p>
-              <p className="text-xs opacity-90">Click to learn more</p>
+              {!isExpanded && <p className="text-xs opacity-90">Click to learn more</p>}
             </div>
           </div>
           <button
@@ -84,6 +84,9 @@ export default function MergerNotification() {
                   >
                     (248) 616-0900
                   </a>
+                  <p className="text-xs text-gray-600 mt-1">
+                    Mention you're being referred from Cultivate Wellness Chiropractic to see Dr. Zach.
+                  </p>
                 </div>
               </div>
 
