@@ -68,7 +68,7 @@ export default function MergerNotification() {
                 Dr. Zach has merged with Van Every Family Chiropractic Center
               </h3>
               <p className="text-sm text-gray-600 mb-3">
-                Continue your care with Dr. Zach at our new Royal Oak location.
+                Schedule your care with Dr. Zach at our new Royal Oak location.
               </p>
             </div>
 
