@@ -8,15 +8,10 @@ export default function Header() {
   const location = useLocation();
 
   const navLinks = [
-    { to: '/about-us', label: 'About Us' },
-    { to: '/meet-dr-zach', label: 'Meet Dr. Zach' },
-    { to: '/talsky-tonal-chiropractic', label: 'Talsky Tonal' },
-    { to: '/new-patient-center', label: 'New Patients' },
-    { to: '/pediatric', label: 'Pediatric' },
-    { to: '/prenatal', label: 'Prenatal' },
-    { to: '/family', label: 'Family' },
-    { to: '/free-guides-for-parents', label: 'Free Guides' },
-    { to: '/contact-us', label: 'Contact' },
+    { to: '/paper', label: 'The Talsky Tonal Paper' },
+    { to: '/videos', label: 'Talsky Tonal Videos' },
+    { to: '/modules', label: 'Online Modules' },
+    { to: '/books', label: 'Tonal Books' },
   ];
 
   const isActive = (path: string) => location.pathname === path;
@@ -55,10 +50,10 @@ export default function Header() {
                 </Link>
               ))}
               <Link
-                to="/schedule-appointment"
+                to="/register"
                 className="bg-primary-dark text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-accent transition whitespace-nowrap"
               >
-                Book Appointment
+                Register
               </Link>
             </div>
 
@@ -89,11 +84,11 @@ export default function Header() {
                 </Link>
               ))}
               <Link
-                to="/schedule-appointment"
+                to="/register"
                 onClick={() => setIsMenuOpen(false)}
                 className="block mx-4 mt-4 bg-primary-dark text-white px-4 py-2 rounded-lg text-sm font-medium hover:bg-primary-accent transition text-center"
               >
-                Book Appointment
+                Register
               </Link>
             </div>
           )}

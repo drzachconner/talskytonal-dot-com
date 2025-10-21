@@ -3,96 +3,54 @@ import { SITE } from '../data/site';
 export function organizationSchema() {
   return {
     '@context': 'https://schema.org',
-    '@type': 'MedicalBusiness',
+    '@type': 'EducationalOrganization',
     '@id': `https://${SITE.domain}/#organization`,
     name: SITE.name,
-    alternateName: 'Cultivate Wellness',
     url: `https://${SITE.domain}`,
     logo: `https://${SITE.domain}/images/logo.webp`,
-    image: `https://${SITE.domain}/images/hero-family.webp`,
+    image: `https://${SITE.domain}/images/Talsky at source2.jpg`,
     description: SITE.description,
-    priceRange: SITE.priceRange,
-    telephone: SITE.phone,
     email: SITE.email,
-    foundingDate: '2020',
-    address: {
-      '@type': 'PostalAddress',
-      streetAddress: SITE.address.street,
-      addressLocality: SITE.address.city,
-      addressRegion: SITE.address.region,
-      postalCode: SITE.address.postal,
-      addressCountry: SITE.address.country,
+    foundingDate: '2001',
+    founder: {
+      '@type': 'Person',
+      name: 'Dr. Marvin Talsky',
+      honorificPrefix: 'Dr.',
+      honorificSuffix: 'DC',
+      jobTitle: 'Doctor of Chiropractic',
     },
-    geo: {
-      '@type': 'GeoCoordinates',
-      latitude: SITE.geo.latitude,
-      longitude: SITE.geo.longitude,
-    },
-    areaServed: {
-      '@type': 'GeoCircle',
-      geoMidpoint: {
-        '@type': 'GeoCoordinates',
-        latitude: SITE.geo.latitude,
-        longitude: SITE.geo.longitude,
-      },
-      geoRadius: '30000',
-    },
-    openingHoursSpecification: [
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Friday',
-        opens: '15:00',
-        closes: '18:30',
-      },
-      {
-        '@type': 'OpeningHoursSpecification',
-        dayOfWeek: 'Saturday',
-        opens: '08:00',
-        closes: '13:00',
-      },
-    ],
     sameAs: [
       SITE.socials.facebook,
       SITE.socials.instagram,
       SITE.socials.tiktok,
       SITE.socials.youtube,
-      `https://www.google.com/maps/place/?q=place_id:ChIJBQUKW2fJJIgRZoaJtd9K7ac`,
     ],
-    hasMap: `https://www.google.com/maps/place/Cultivate+Wellness+Chiropractic/@${SITE.geo.latitude},${SITE.geo.longitude}`,
     hasOfferCatalog: {
       '@type': 'OfferCatalog',
-      name: 'Chiropractic Services',
+      name: 'Educational Resources',
       itemListElement: [
         {
           '@type': 'Offer',
           itemOffered: {
-            '@type': 'MedicalProcedure',
-            name: 'Pediatric Chiropractic Care',
-            description: 'Specialized chiropractic care for children, supporting their nervous system development and overall wellness.',
+            '@type': 'Course',
+            name: 'Talsky Tonal Online Modules',
+            description: 'Comprehensive online learning modules for mastering Talsky Tonal Chiropractic techniques.',
+            educationalLevel: 'Professional Development',
+            provider: {
+              '@id': `https://${SITE.domain}/#organization`,
+            },
           },
         },
         {
           '@type': 'Offer',
           itemOffered: {
-            '@type': 'MedicalProcedure',
-            name: 'Prenatal Chiropractic Care',
-            description: 'Gentle chiropractic care for expecting mothers to support a healthy pregnancy and optimal birth outcomes.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'MedicalProcedure',
-            name: 'Family Chiropractic Care',
-            description: 'Comprehensive chiropractic care for the whole family, promoting optimal nervous system function.',
-          },
-        },
-        {
-          '@type': 'Offer',
-          itemOffered: {
-            '@type': 'MedicalProcedure',
-            name: 'Talsky Tonal Chiropractic',
-            description: 'Advanced neurologically-focused chiropractic technique for gentle, effective nervous system optimization.',
+            '@type': 'Book',
+            name: 'Talsky Tonal Books',
+            description: 'Educational books and reading materials on Talsky Tonal methodology and philosophy.',
+            author: {
+              '@type': 'Person',
+              name: 'Dr. Marvin Talsky',
+            },
           },
         },
       ],

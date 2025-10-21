@@ -5,10 +5,11 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#6383ab',
-          dark: '#002d4e',
-          light: '#73b7ce',
-          accent: '#405e84',
+          DEFAULT: '#506b8e',
+          dark: '#3d5270',
+          light: '#6d89af',
+          accent: '#506b8e',
+          cream: '#ECDCBA',
         },
       },
       fontFamily: {
