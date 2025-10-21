@@ -2,12 +2,12 @@ import { useSeo } from '../hooks/useSeo';
 import { SITE } from '../data/site';
 import { useEffect } from 'react';
 import TopNotificationBanner from '../components/TopNotificationBanner';
-import HeroTTC from '../components/HeroTTC';
+import SimpleHero from '../components/SimpleHero';
 import BeyondTechnique from '../components/BeyondTechnique';
 import OnlineCoursesSection from '../components/OnlineCoursesSection';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
 import BringTTCArea from '../components/BringTTCArea';
-import LeadCaptureForm from '../components/LeadCaptureForm';
+import JotFormEmbed from '../components/JotFormEmbed';
 import ContactBlock from '../components/ContactBlock';
 
 export default function Home() {
@@ -46,12 +46,12 @@ export default function Home() {
   return (
     <>
       <TopNotificationBanner />
-      <HeroTTC />
+      <SimpleHero />
       <BeyondTechnique />
       <OnlineCoursesSection />
       <TestimonialsCarousel />
       <BringTTCArea />
-      <LeadCaptureForm />
+      <JotFormEmbed />
       <ContactBlock />
     </>
   );

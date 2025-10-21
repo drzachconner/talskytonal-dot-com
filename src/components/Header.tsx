@@ -28,9 +28,11 @@ export default function Header() {
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 gap-12">
             <Link to={LINKS.home} className="flex items-center flex-shrink-0">
-              <span className="font-semibold text-ttc-blue text-lg md:text-xl font-heading">
-                Talsky Tonal Chiropractic
-              </span>
+              <img
+                src="/images/ttc-logo.webp"
+                alt="Talsky Tonal Chiropractic"
+                className="h-12 md:h-14 w-auto"
+              />
             </Link>
 
             <div className="hidden lg:flex items-center space-x-6 xl:space-x-8">
