@@ -1,8 +1,10 @@
 import { useSeo } from '../hooks/useSeo';
 import { SITE } from '../data/site';
 import { useEffect } from 'react';
+import TopNotificationBanner from '../components/TopNotificationBanner';
 import HeroTTC from '../components/HeroTTC';
 import BeyondTechnique from '../components/BeyondTechnique';
+import OnlineCoursesSection from '../components/OnlineCoursesSection';
 import TestimonialsCarousel from '../components/TestimonialsCarousel';
 import BringTTCArea from '../components/BringTTCArea';
 import LeadCaptureForm from '../components/LeadCaptureForm';
@@ -43,8 +45,10 @@ export default function Home() {
 
   return (
     <>
+      <TopNotificationBanner />
       <HeroTTC />
       <BeyondTechnique />
+      <OnlineCoursesSection />
       <TestimonialsCarousel />
       <BringTTCArea />
       <LeadCaptureForm />
