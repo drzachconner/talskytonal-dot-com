@@ -3,6 +3,7 @@ import { useEffect } from 'react';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import MobileCTA from './components/MobileCTA';
+import MergerNotification from './components/MergerNotification';
 import Home from './pages/Home';
 import AboutUs from './pages/AboutUs';
 import MeetDrZach from './pages/MeetDrZach';
@@ -119,6 +120,7 @@ function App() {
         </main>
         <Footer />
         <MobileCTA />
+        <MergerNotification />
       </div>
     </BrowserRouter>
   );
